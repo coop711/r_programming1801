@@ -15,7 +15,7 @@ options(digits = 7)
 # histogram
 library(ggplot2)
 qplot(c(1, 2, 2, 2, 3, 3), binwidth = 1)
-qplot(c(1, 1, 1, 1, 1, 2, 2, 2, 2,3, 3, 4), binwidth = 1)
+qplot(c(1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 4), binwidth = 1)
 qplot(rolls, binwidth = 1)
 # Weighted Dice
 roll.w <- roll
