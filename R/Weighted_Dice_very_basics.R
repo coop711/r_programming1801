@@ -17,10 +17,13 @@ help("%o%")
 ?outer
 # Functions
 round(3.1415)
+round(3.1415, digits = 2)
 factorial(3)
 mean(1:6)
 mean(die)
+sd(die)
 round(mean(die))
+?sample
 sample(x = 1:4, size = 2)
 sample(x = die, size = 1)
 sample(x = die, size = 1)
