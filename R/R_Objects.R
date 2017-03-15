@@ -96,8 +96,35 @@ as.numeric(FALSE)
 ## Lists
 list1 <- list(100:130, "R", list(TRUE, FALSE))
 list1
+attributes(list1)
+list2 <- list(number = 100:130, char = "R", logical = list(TRUE, FALSE))
+list2
+attributes(list2)
+card <- list("ace", "hearts", 1)
+card
 ## Data Frames
-
+df <- data.frame(face = c("ace", "two", "six"), suit = c("clubs", "clubs", "clubs"), value = c(1, 2, 3))
+df
+typeof(df)
+class(df)
+attributes(df)
+str(df)
+df <- data.frame(face = c("ace", "two", "six"),
+                 suit = c("clubs", "clubs", "clubs"),
+                 value = c(1, 2, 3),
+                 stringsAsFactors = FALSE)
+str(df)
 ## from URL
 deck <- read.csv("https://gist.githubusercontent.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv")
 str(deck)
+head(deck)
+tail(deck)
+deck <- read.csv("https://gist.githubusercontent.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv",
+                 stringsAsFactors = FALSE)
+ls()
+save(list = ls(), file = "./r_objects.RData")
+rm(list = ls())
+ls()
+load("./r_objects.RData")
+ls()
+rm(list = ls())
