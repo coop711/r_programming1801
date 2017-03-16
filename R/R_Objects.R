@@ -70,9 +70,12 @@ attributes(die)
 class("Hello")
 class(5)
 ## Dates and Times
+today <- Sys.Date()
 now <- Sys.time()
 now
+typeof(today)
 typeof(now)
+class(today)
 class(now)
 unclass(now)
 mil <- 1000000
@@ -86,9 +89,12 @@ attributes(gender)
 unclass(gender)
 gender
 as.character(gender)
+gender2 <- factor(c("male", "female", "female", "male"), levels = c("male", "female"))
+str(gender2)
+## Coercion
 card <- c("ace", "hearts", 1)
 card
-## Coercion
+str(card)
 sum(c(TRUE, TRUE, FALSE, FALSE))
 as.character(1)
 as.logical(1)
@@ -100,18 +106,25 @@ attributes(list1)
 list2 <- list(number = 100:130, char = "R", logical = list(TRUE, FALSE))
 list2
 attributes(list2)
-card <- list("ace", "hearts", 1)
-card
 ## Data Frames
-df <- data.frame(face = c("ace", "two", "six"), suit = c("clubs", "clubs", "clubs"), value = c(1, 2, 3))
+df1 <- data.frame(c("ace", "two", "six"), rep("clubs", 3 ), c(1, 2, 6))
+df1
+df <- data.frame(face = c("ace", "two", "six"), suit = rep("clubs", 3), value = c(1, 2, 6))
 df
+face <- c("ace", "two", "six")
+suit <- rep("clubs", 3)
+value <- c(1, 2, 6)
+df2 <- data.frame(face, suit, value)
+df2
+df3 <- data.frame(Face = face, Suit = suit, Value = value)
+df3
 typeof(df)
 class(df)
 attributes(df)
 str(df)
 df <- data.frame(face = c("ace", "two", "six"),
                  suit = c("clubs", "clubs", "clubs"),
-                 value = c(1, 2, 3),
+                 value = c(1, 2, 6),
                  stringsAsFactors = FALSE)
 str(df)
 ## from URL
@@ -121,10 +134,10 @@ head(deck)
 tail(deck)
 deck <- read.csv("https://gist.githubusercontent.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv",
                  stringsAsFactors = FALSE)
-ls()
 str(deck)
 write.csv(deck, file = "../data/cards.csv")
 write.csv(deck, file = "../data/cards.csv", row.names = FALSE)
+ls()
 save(list = ls(), file = "./r_objects.RData")
 rm(list = ls())
 ls()
