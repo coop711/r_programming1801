@@ -1,3 +1,4 @@
+# R Notation
 ## read.csv
 read.csv("../data/cards.csv")
 deck <- read.csv("../data/cards.csv")
