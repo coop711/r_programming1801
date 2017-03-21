@@ -24,4 +24,4 @@ roll2 <- function(bones = 1:6) {
 roll2()
 ls()
 # dump
-dump(list = c("roll", "roll2"), file = "roll.R")
+dump(list = c("roll", "roll2"), file = "./roll.R")

@@ -110,13 +110,18 @@ attributes(list2)
 ## Data Frames
 df1 <- data.frame(c("ace", "two", "six"), rep("clubs", 3 ), c(1, 2, 6))
 df1
-df <- data.frame(face = c("ace", "two", "six"), suit = rep("clubs", 3), value = c(1, 2, 6))
+df <- data.frame(face = c("ace", "two", "six"), 
+                 suit = rep("clubs", 3), 
+                 value = c(1, 2, 6))
 df
+str(df)
 face <- c("ace", "two", "six")
 suit <- rep("clubs", 3)
 value <- c(1, 2, 6)
-df2 <- data.frame(face, suit, value)
+str(face)
+df2 <- data.frame(face, suit, value, stringsAsFactors = FALSE)
 df2
+str(df2)
 df3 <- data.frame(Face = face, Suit = suit, Value = value)
 df3
 typeof(df)
@@ -137,7 +142,8 @@ deck <- read.csv("https://gist.githubusercontent.com/garrettgman/9629323/raw/ee5
                  stringsAsFactors = FALSE)
 str(deck)
 write.csv(deck, file = "../data/cards.csv")
-write.csv(deck, file = "../data/cards.csv", row.names = FALSE)
+write.csv(deck, file = "../data/cards.csv", 
+          row.names = FALSE)
 ls()
 save(list = ls(), file = "./r_objects.RData")
 rm(list = ls())
