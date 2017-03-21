@@ -3,17 +3,20 @@
 read.csv("../data/cards.csv")
 deck <- read.csv("../data/cards.csv")
 str(deck)
-deck <- read.csv("../data/cards.csv", stringsAsFactors = FALSE)
+deck <- read.csv("../data/cards.csv", 
+                 stringsAsFactors = FALSE)
 str(deck)
 head(deck)
 ## Positive Integers
+vec <- c(6, 1, 3, 6, 10, 5)
+vec[1:3]
 deck[1, 1]
 deck[1, 1:3]
 new <- deck[1, 1:3]
 new
-vec <- c(6, 1, 3, 6, 10, 5)
-vec[1:3]
+str(new)
 str(deck[1, 1])
+deck[1, 1, drop = FALSE]
 str(deck[1, 1, drop = FALSE])
 str(deck[1, 1:3])
 str(deck[1:3, 1])
