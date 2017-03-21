@@ -63,3 +63,4 @@ lst$numbers
 lst[[1]]
 lst["numbers"]
 lst[["numbers"]]
+dump(list = c("deal", "shuffle"), file = "shuffle.R")
