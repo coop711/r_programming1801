@@ -19,7 +19,9 @@ str(deck[1, 1])
 deck[1, 1, drop = FALSE]
 str(deck[1, 1, drop = FALSE])
 str(deck[1, 1:3])
+deck[1:3, 1]
 str(deck[1:3, 1])
+deck[1:3, 1, drop = FALSE]
 str(deck[1:3, 1, drop = FALSE])
 ## Negative Integers
 deck[-1, 1:3]
@@ -35,6 +37,9 @@ deck[rows, ]
 ## Names
 deck[1, c("face", "suit", "value")]
 deck[ , "value"]
+deck[, 3]
+deck[, -(1:2)]
+deck[, c(FALSE, FALSE, TRUE)]
 deck[ , "value", drop = FALSE]
 deal <- function(cards) { 
   cards[1, ]
@@ -46,7 +51,10 @@ deck2 <- deck[52:1, ]
 head(deck2)
 deck3 <- deck[c(2, 1, 3:52), ]
 head(deck3)
+deal(deck3)
+#set.seed(1)
 random <- sample(1:52, size = 52)
+random
 deck4 <- deck[random, ]
 head(deck4)
 shuffle <- function(cards) {
@@ -61,10 +69,14 @@ str(deck)
 deck$value
 mean(deck$value)
 median(deck$value)
-lst <- list(numbers = c(1, 2), logical = TRUE, strings = c("a", "b", "c"))
+lst <- list(numbers = c(1, 2), 
+            logical = TRUE, 
+            strings = c("a", "b", "c"))
 lst[1]
 lst$numbers
 lst[[1]]
 lst["numbers"]
 lst[["numbers"]]
 dump(list = c("deal", "shuffle"), file = "shuffle.R")
+save.image(file = "./r_notation.RData")
+
