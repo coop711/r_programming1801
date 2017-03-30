@@ -7,11 +7,13 @@ vec[1]
 vec[1] <- 1000
 vec
 vec[c(1, 3, 5)] <- c(1, 1, 1)
+vec
 vec[c(1, 3, 5)] <- 1
 vec
 vec[4:6] <- vec[4:6] + 1
 vec
 vec[7] <- 0
+vec
 vec[9] <- 0
 vec
 deck2$new <- 1:52
@@ -20,6 +22,7 @@ deck2$new <- NULL
 head(deck2)
 deck2[seq(13, 52, by = 13), ]
 deck2[seq(13, 52, by = 13), 1]
+str(deck2[seq(13, 52, by = 13), 1])
 deck2[seq(13, 52, by = 13), 1, drop = FALSE]
 deck2$value[seq(13, 52, by = 13)]
 deck2$value[seq(13, 52, by = 13)] <- 14
@@ -29,6 +32,7 @@ deck3 <- shuffle(deck)
 deck3
 head(deck3)
 ## Logical Subsetting
+vec <- vec[1:7]
 vec
 vec[c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE)]
 ### Logical Tests
@@ -40,6 +44,7 @@ c(1, 2) %in% c(3, 4, 5)
 c(1, 2, 3) %in% c(3, 4, 5)
 c(1, 2, 3, 4) %in% c(3, 4, 5)
 deck2$face == "ace"
+which(deck2$face == "ace")
 sum(deck2$face == "ace")
 deck2$value[deck2$face == "ace"]
 deck3$value[deck3$face == "ace"] <- 14
@@ -48,6 +53,7 @@ deck4 <- deck
 deck4$value <- 0
 head(deck4, 13)
 deck4$suit == "hearts"
+which(deck4$suit == "hearts")
 deck4$value[deck4$suit == "hearts"]
 deck4$value[deck4$suit == "hearts"] <- 1
 deck4$value[deck4$suit == "hearts"]
@@ -61,13 +67,17 @@ a == b
 b == c
 a == b & b == c
 deck4$face == "queen" & deck4$suit == "spades"
+which(deck4$face == "queen" & deck4$suit == "spades")
 queenOfSpades <- deck4$face == "queen" & deck4$suit == "spades"
+queenOfSpades
+which(queenOfSpades)
 deck4[queenOfSpades, ]
 deck4$value[queenOfSpades]
 deck5 <- deck
 deck5
 facecard <- deck5$face %in% c("king", "queen", "jack")
 facecard
+which(facecard)
 deck5[facecard, ]
 deck5$value[facecard] <- 10
 head(deck5, 13)
