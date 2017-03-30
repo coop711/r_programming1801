@@ -1,5 +1,6 @@
 # R Notation
 ## read.csv
+sink(file = "../docs/output.txt")
 read.csv("../data/cards.csv")
 deck <- read.csv("../data/cards.csv")
 str(deck)
@@ -79,4 +80,4 @@ lst["numbers"]
 lst[["numbers"]]
 dump(list = c("deal", "shuffle"), file = "shuffle.R")
 save.image(file = "./r_notation.RData")
-
+sink()
