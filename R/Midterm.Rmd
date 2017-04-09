@@ -1,0 +1,127 @@
+---
+title: "중간고사"
+author: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  __________학과 학번__________ 이름__________"
+date: "2017-04-18"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#### 1. 
+
+`die <- 1:6` 를 실행하였다. 다음 물음에 답하시오.
+
+
+1.1 다음 코드 중 에러 메시지가 나올 것으로 예상되는 것은?
+
+가. `die + 1`
+
+나. `die + 1:2`
+
+다. `die + 1:3`
+
+라. `die + 1:4`
+
+1.2 다음 중 그 결과가 다른 것을 하나 고르시오.
+
+가. `die * die`
+
+나. `die ^ 2`
+
+다. `die ** 2`
+
+라. `die %*% die`
+
+1.3 `die / die` 의 계산 결과는 콘솔에 어떻게 나타나는가?
+
+가. `1`
+
+나. `[1] 1`
+
+다. `1 1 1 1 1 1`
+
+라. `[1] 1 1 1 1 1 1`
+
+1.4 `die`의 각 원소를 5로 나눈 나머지를 나타내는 코드는 어느 것인가?
+
+가. `die %% 5`
+
+나. `die %/% 5`
+
+다. `die %*% 5`
+
+라. `die %o% 5`
+
+1.5 사칙 연산자 중 `*` 에 대한 도움말을 구하고자 할 때 옳지 않은 것은?
+
+가. `help(*)`
+
+나. `help("*")`
+
+다. `?`&#96;`*`&#96;
+
+라. `?"*"`
+
+1.6 다음 중 나머지 셋과 다른 연산을 수행하고 있는 것은?
+
+가. `die %% 2`
+
+나. `"%%"(die, 2)`
+
+다. &#96;`%%`&#96;`(die, 2)`
+
+라. &#96;`%%`&#96;`(2, die)`
+
+1.7 공평한 주사위를 두 번 굴릴 때 나오는 결과를 표현한 코드로 적절한 것은? 
+
+가. `sample(2, die)`
+
+나. `sample(die, 2, replace = TRUE)`
+
+다. `sample(die, 2, replace = FALSE)`
+
+라. `sample(2, die, replace = TRUE)`
+
+1.8 `roll2`를 다음과 같이 정의한 함수라 할 때, 
+
+```
+roll2 <- function(bones) {
+  dice <- sample(bones, size = 2, replace = TRUE)
+  sum(dice)
+}
+```
+어떤 경우에 에러가 출력되는가?
+
+가. `roll2(bones = 1:4)`
+
+나. `roll2(bones = 1:5)`
+
+다. `roll2(1:20)`
+
+라. `roll2()`
+
+1.9 위에서 정의한 `roll2`를 나중에 다시 불러들여 사용하기 위하여 저장할 때 적절한 코드는?
+
+가. `dump(list = "roll2", file = "./roll2.R")`
+
+나. `save(list = "roll2", file = "./roll2.R")`
+
+다. `save.image(file = "./roll2.R")`
+
+라. `write(list = "roll2", file = "./roll2.R")`
+
+1.10 위와 같이 저장한 `roll2`를 불러들이는 코드는 무엇인가? 작업디렉토리와 저장한 티덱토리가 같다고 가정하자.
+
+가. `read("./roll2.R")`
+
+나. `source("./roll2.R")`
+
+다. `load("./roll2.R")`
+
+라. `get("./roll2.R")`
+
+
