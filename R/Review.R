@@ -85,8 +85,7 @@ qplot(c(1, 2, 2, 2, 3, 3), binwidth = 1)
 qplot(c(1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 4), binwidth = 1)
 qplot(rolls, binwidth = 1)
 ## Weighted Dice
-roll.w <- roll
-fix(roll.w)
+roll.w <- roll ; fix(roll.w)
 roll.w
 replicate(20, roll.w())
 N <- 10000
@@ -152,6 +151,9 @@ names(die) <- c("one", "two", "three", "four", "five", "six")
 die
 names(die)
 attributes(die)
+names(die) <- ""
+names(die) <- NA
+names(die) <- NaN
 names(die) <- NULL
 ## Dim
 dim(die) <- c(2, 3)
