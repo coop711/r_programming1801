@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-#### 1. 
+#### 1. Dice
 
 `die <- 1:6` 를 실행하였다. 다음 물음에 답하시오.
 
@@ -124,4 +124,110 @@ roll2 <- function(bones) {
 
 라. `get("./roll2.R")`
 
+#### 2. Simulation 
 
+2.1 공평한 주사위 두 개를 던져 합을 구하는 게임을 20번 반복하는 코드는 다음 중 어느 것인가? 위에서 정의한 `roll2`를 이용하시오. 단, `roll2`는 위에 정의한 대로 임.
+
+가. `replicate(20, roll2())`
+
+나. `replicate(20, roll2(bones = 1:6))`
+
+다. `replicate(roll2(), 20)`
+
+라. `replicate(roll2(bones = 1:6), 20)`
+
+2.2 위의 실험을 1만번 반복하고, 그 결과를 `rolls`에 저장한 후 `ggplot` 패키지을 이용하여 간단한 히스토그램으로 나타내고자 한다. `ggplot`패키지는 설치되어 있고 `library`에 등록되어 있을 때 자료 특성에 비추어 가장 적절한 코드는?
+
+가. `plot(rolls)`
+
+나. `plot(rolls, binwidth = 1)`
+
+다. `qplot(rolls)`
+
+라. `qplot(rolls, binwidth = 1)`
+
+2.3 `roll`함수를 편집하여 확률 조건을 추가한 `roll.w`를 만들려고 할 때 필요한 코드는? (단, 여기서 `;` 는 그 다음 코드를 이어서 수행하라는 것이다.)
+
+가. `roll.w <- roll ; fix(roll.w)`
+
+나. `roll.w <- roll ; vi(roll.w)`
+
+다. `roll <- roll.w ; fix(roll.w)`
+
+라. `roll <- roll.w ; vi(roll.w)`
+
+
+#### 3. R Objects
+
+3.1 `is.vector(5)` 의 답은 무엇인가?
+
+가. `TRUE`
+
+나. `FALSE`
+
+다. `Yes`
+
+라. `No`
+
+3.2 위에서 저장해 놓은 `die`에 대해서 `typeof(die)`의 값은 무엇인가?
+
+가. `"logical"`
+
+나. `"integer"`
+
+다. `"double"`
+
+라. `"complex"`
+
+3.4 `attributes(die)` 를 수행했더니 `$names` 항목이 발견되었다. 이 속성을 없애고자 할 때 적당한 코드는?
+
+가. `names(die) <- ""`
+
+나. `names(die) <- NA`
+
+다. `names(die) <- NULL`
+
+라. `names(die) <- NaN`
+
+3.5 `dim(die) <- c(2, 3)`를 수행하였을 때 `class(die)` 는 무엇인가?
+
+가. `[1] "integer"`
+
+나. `[1] "vector"`
+
+다. `[1] "matrix"`
+
+라. `[1] "array"`
+
+3.6 `today <- Sys.Date() ; class(today)` 의 결과는?
+
+가. `[1] "integer"`
+
+나. `[1] "Date"`
+
+다. `[1] "matrix"`
+
+라. `[1] "array"`
+
+3.7 `gender <- factor(c("male", "female", "female", "male"))` 를 수행하고 `unclass(gender)`를 수행하면 그 결과는?
+
+가. `[1] 2 1 1 2`
+
+나. `[1] "integer"`
+
+다. 
+
+```
+[1] male   female female male  
+Levels: female male
+```
+
+라.  
+
+```
+$levels
+[1] "female" "male"  
+
+$class
+[1] "factor"
+```
