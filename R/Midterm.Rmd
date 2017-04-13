@@ -66,6 +66,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 라. `?"*"`
 
+<P style = "page-break-before:always">
+
 (@) 다음 중 나머지 셋과 다른 연산을 수행하고 있는 것은?
 
 가. `die %% 2`
@@ -124,6 +126,8 @@ roll2 <- function(bones) {
 
 라. `get("./roll2.R")`
 
+<P style = "page-break-before:always">
+
 #### II. Simulation 
 
 (@) 공평한 주사위 두 개를 던져 합을 구하는 게임을 20번 반복하는 코드는 다음 중 어느 것인가? 위에서 정의한 `roll2`를 이용하시오. 단, `roll2`는 위에 정의한 대로 임.
@@ -179,6 +183,8 @@ roll2 <- function(bones) {
 
 라. `"complex"`
 
+<P style = "page-break-before:always">
+
 (@) `attributes(die)` 를 수행했더니 `$names` 항목이 발견되었다. 이 속성을 없애고자 할 때 적당한 코드는?
 
 가. `names(die) <- ""`
@@ -231,6 +237,9 @@ $levels
 $class
 [1] "factor"
 ```
+
+<P style = "page-break-before:always">
+
 #### IV. list and data frame
 
 * `list2 <- list(number = 100:130, char = "R", logical = list(TRUE, FALSE))` 에서 
@@ -295,6 +304,8 @@ $R
 
 라. `list2[3][1][[1]]`
 
+<P style = "page-break-before:always">
+
 *  `df`를 다음과 같이 정의할 때
 ```
 df <- data.frame(face = c("ace", "two", "six"), 
@@ -342,6 +353,8 @@ df <- data.frame(face = c("ace", "two", "six"),
  $ value: num  1 2 6
 </code></pre>
 
+<P style = "page-break-before:always">
+
 (@) `df`의 정의에 `stringsAsFactors = FALSE`를 추가하면 `str(df)` 는 어떻게 나오는가?
 
 가. 
@@ -380,6 +393,8 @@ df <- data.frame(face = c("ace", "two", "six"),
  $ suit : chr "clubs": 1 1 1
  $ value: num  1 2 6
 </code></pre>
+
+<P style = "page-break-before:always">
 
 * 다음 그림과 같은 구조를 갖는`cards.csv`의 URL이 `https://raw.githubusercontent.com/coop711/r_programming/master/data/cards.csv` 라고 하자.
 
@@ -434,6 +449,8 @@ deck <- read.csv(url, stringsAsaaFactors = FALSE)
 다. `save.image(file = "./r_objects.RData")`
 
 라. `save.image("./r_objects.RData")`
+
+<P style = "page-break-before:always">
 
 (@) 위에서 저장한 `r_objects.RData` 를 불러오는 코드로 적절한 것은?
 

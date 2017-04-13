@@ -124,45 +124,62 @@ $(document).ready(function () {
 </div>
 
 
-<div id="dice" class="section level4">
-<h4>1. Dice</h4>
+<div id="i.-dice" class="section level4">
+<h4>I. Dice</h4>
 <p><code>die &lt;- 1:6</code> 를 실행하였다. 다음 물음에 답하시오.</p>
-<p>1.1 다음 코드 중 에러 메시지가 나올 것으로 예상되는 것은?</p>
+<ol class="example" style="list-style-type: decimal">
+<li>다음 코드 중 에러 메시지가 나올 것으로 예상되는 것은?</li>
+</ol>
 <p>가. <code>die + 1</code></p>
 <p>나. <code>die + 1:2</code></p>
 <p>다. <code>die + 1:3</code></p>
 <p>라. <code>die + 1:4</code></p>
-<p>1.2 다음 중 그 결과가 다른 것을 하나 고르시오.</p>
+<ol start="2" class="example" style="list-style-type: decimal">
+<li>다음 중 그 결과가 다른 것을 하나 고르시오.</li>
+</ol>
 <p>가. <code>die * die</code></p>
 <p>나. <code>die ^ 2</code></p>
 <p>다. <code>die ** 2</code></p>
 <p>라. <code>die %*% die</code></p>
-<p>1.3 <code>die / die</code> 의 계산 결과는 콘솔에 어떻게 나타나는가?</p>
+<ol start="3" class="example" style="list-style-type: decimal">
+<li><code>die / die</code> 의 계산 결과는 콘솔에 어떻게 나타나는가?</li>
+</ol>
 <p>가. <code>1</code></p>
 <p>나. <code>[1] 1</code></p>
 <p>다. <code>1 1 1 1 1 1</code></p>
 <p>라. <code>[1] 1 1 1 1 1 1</code></p>
-<p>1.4 <code>die</code>의 각 원소를 5로 나눈 나머지를 나타내는 코드는 어느 것인가?</p>
+<ol start="4" class="example" style="list-style-type: decimal">
+<li><code>die</code>의 각 원소를 5로 나눈 나머지를 나타내는 코드는 어느 것인가?</li>
+</ol>
 <p>가. <code>die %% 5</code></p>
 <p>나. <code>die %/% 5</code></p>
 <p>다. <code>die %*% 5</code></p>
 <p>라. <code>die %o% 5</code></p>
-<p>1.5 사칙 연산자 중 <code>*</code> 에 대한 도움말을 구하고자 할 때 옳지 않은 것은?</p>
+<ol start="5" class="example" style="list-style-type: decimal">
+<li>사칙 연산자 중 <code>*</code> 에 대한 도움말을 구하고자 할 때 옳지 않은 것은?</li>
+</ol>
 <p>가. <code>help(*)</code></p>
 <p>나. <code>help(&quot;*&quot;)</code></p>
 <p>다. <code>?</code>`<code>*</code>`</p>
 <p>라. <code>?&quot;*&quot;</code></p>
-<p>1.6 다음 중 나머지 셋과 다른 연산을 수행하고 있는 것은?</p>
+<P style="page-break-before:always">
+<ol start="6" class="example" style="list-style-type: decimal">
+<li>다음 중 나머지 셋과 다른 연산을 수행하고 있는 것은?</li>
+</ol>
 <p>가. <code>die %% 2</code></p>
 <p>나. <code>&quot;%%&quot;(die, 2)</code></p>
 <p>다. `<code>%%</code>`<code>(die, 2)</code></p>
 <p>라. `<code>%%</code>`<code>(2, die)</code></p>
-<p>1.7 공평한 주사위를 두 번 굴릴 때 나오는 결과를 표현한 코드로 적절한 것은?</p>
+<ol start="7" class="example" style="list-style-type: decimal">
+<li>공평한 주사위를 두 번 굴릴 때 나오는 결과를 표현한 코드로 적절한 것은?</li>
+</ol>
 <p>가. <code>sample(2, die)</code></p>
 <p>나. <code>sample(die, 2, replace = TRUE)</code></p>
 <p>다. <code>sample(die, 2, replace = FALSE)</code></p>
 <p>라. <code>sample(2, die, replace = TRUE)</code></p>
-<p>1.8 <code>roll2</code>를 다음과 같이 정의한 함수라 할 때,</p>
+<ol start="8" class="example" style="list-style-type: decimal">
+<li><code>roll2</code>를 다음과 같이 정의한 함수라 할 때,</li>
+</ol>
 <pre><code>roll2 &lt;- function(bones) {
   dice &lt;- sample(bones, size = 2, replace = TRUE)
   sum(dice)
@@ -172,63 +189,87 @@ $(document).ready(function () {
 <p>나. <code>roll2(bones = 1:5)</code></p>
 <p>다. <code>roll2(1:20)</code></p>
 <p>라. <code>roll2()</code></p>
-<p>1.9 위에서 정의한 <code>roll2</code>를 나중에 다시 불러들여 사용하기 위하여 저장할 때 적절한 코드는?</p>
+<ol start="9" class="example" style="list-style-type: decimal">
+<li>위에서 정의한 <code>roll2</code>를 나중에 다시 불러들여 사용하기 위하여 저장할 때 적절한 코드는?</li>
+</ol>
 <p>가. <code>dump(list = &quot;roll2&quot;, file = &quot;./roll2.R&quot;)</code></p>
 <p>나. <code>save(list = &quot;roll2&quot;, file = &quot;./roll2.R&quot;)</code></p>
 <p>다. <code>save.image(file = &quot;./roll2.R&quot;)</code></p>
 <p>라. <code>write(list = &quot;roll2&quot;, file = &quot;./roll2.R&quot;)</code></p>
-<p>1.10 위와 같이 저장한 <code>roll2</code>를 불러들이는 코드는 무엇인가? 작업디렉토리와 저장한 티덱토리가 같다고 가정하자.</p>
+<ol start="10" class="example" style="list-style-type: decimal">
+<li>위와 같이 저장한 <code>roll2</code>를 불러들이는 코드는 무엇인가? 작업디렉토리와 저장한 티덱토리가 같다고 가정하자.</li>
+</ol>
 <p>가. <code>read(&quot;./roll2.R&quot;)</code></p>
 <p>나. <code>source(&quot;./roll2.R&quot;)</code></p>
 <p>다. <code>load(&quot;./roll2.R&quot;)</code></p>
 <p>라. <code>get(&quot;./roll2.R&quot;)</code></p>
+<P style="page-break-before:always">
 </div>
-<div id="simulation" class="section level4">
-<h4>2. Simulation</h4>
-<p>2.1 공평한 주사위 두 개를 던져 합을 구하는 게임을 20번 반복하는 코드는 다음 중 어느 것인가? 위에서 정의한 <code>roll2</code>를 이용하시오. 단, <code>roll2</code>는 위에 정의한 대로 임.</p>
+<div id="ii.-simulation" class="section level4">
+<h4>II. Simulation</h4>
+<ol start="11" class="example" style="list-style-type: decimal">
+<li>공평한 주사위 두 개를 던져 합을 구하는 게임을 20번 반복하는 코드는 다음 중 어느 것인가? 위에서 정의한 <code>roll2</code>를 이용하시오. 단, <code>roll2</code>는 위에 정의한 대로 임.</li>
+</ol>
 <p>가. <code>replicate(20, roll2())</code></p>
 <p>나. <code>replicate(20, roll2(bones = 1:6))</code></p>
 <p>다. <code>replicate(roll2(), 20)</code></p>
 <p>라. <code>replicate(roll2(bones = 1:6), 20)</code></p>
-<p>2.2 위의 실험을 1만번 반복하고, 그 결과를 <code>rolls</code>에 저장한 후 <code>ggplot</code> 패키지을 이용하여 간단한 히스토그램으로 나타내고자 한다. <code>ggplot</code>패키지는 설치되어 있고 <code>library</code>에 등록되어 있을 때 자료 특성에 비추어 가장 적절한 코드는?</p>
+<ol start="12" class="example" style="list-style-type: decimal">
+<li>위의 실험을 1만번 반복하고, 그 결과를 <code>rolls</code>에 저장한 후 <code>ggplot</code> 패키지을 이용하여 간단한 히스토그램으로 나타내고자 한다. <code>ggplot</code>패키지는 설치되어 있고 <code>library</code>에 등록되어 있을 때 자료 특성에 비추어 가장 적절한 코드는?</li>
+</ol>
 <p>가. <code>plot(rolls)</code></p>
 <p>나. <code>plot(rolls, binwidth = 1)</code></p>
 <p>다. <code>qplot(rolls)</code></p>
 <p>라. <code>qplot(rolls, binwidth = 1)</code></p>
-<p>2.3 <code>roll</code>함수를 편집하여 확률 조건을 추가한 <code>roll.w</code>를 만들려고 할 때 필요한 코드는? (단, 여기서 <code>;</code> 는 그 다음 코드를 이어서 수행하라는 것이다.)</p>
+<ol start="13" class="example" style="list-style-type: decimal">
+<li><code>roll</code>함수를 편집하여 확률 조건을 추가한 <code>roll.w</code>를 만들려고 할 때 필요한 코드는? (단, 여기서 <code>;</code> 는 그 다음 코드를 이어서 수행하라는 것이다.)</li>
+</ol>
 <p>가. <code>roll.w &lt;- roll ; fix(roll.w)</code></p>
 <p>나. <code>roll.w &lt;- roll ; vi(roll.w)</code></p>
 <p>다. <code>roll &lt;- roll.w ; fix(roll.w)</code></p>
 <p>라. <code>roll &lt;- roll.w ; vi(roll.w)</code></p>
 </div>
-<div id="r-objects" class="section level4">
-<h4>3. R Objects</h4>
-<p>3.1 <code>is.vector(5)</code> 의 답은 무엇인가?</p>
+<div id="iii.-r-objects" class="section level4">
+<h4>III. R Objects</h4>
+<ol start="14" class="example" style="list-style-type: decimal">
+<li><code>is.vector(5)</code> 의 답은 무엇인가?</li>
+</ol>
 <p>가. <code>TRUE</code></p>
 <p>나. <code>FALSE</code></p>
 <p>다. <code>Yes</code></p>
 <p>라. <code>No</code></p>
-<p>3.2 위에서 저장해 놓은 <code>die</code>에 대해서 <code>typeof(die)</code>의 값은 무엇인가?</p>
+<ol start="15" class="example" style="list-style-type: decimal">
+<li>위에서 저장해 놓은 <code>die</code>에 대해서 <code>typeof(die)</code>의 값은 무엇인가?</li>
+</ol>
 <p>가. <code>&quot;logical&quot;</code></p>
 <p>나. <code>&quot;integer&quot;</code></p>
 <p>다. <code>&quot;double&quot;</code></p>
 <p>라. <code>&quot;complex&quot;</code></p>
-<p>3.4 <code>attributes(die)</code> 를 수행했더니 <code>$names</code> 항목이 발견되었다. 이 속성을 없애고자 할 때 적당한 코드는?</p>
+<P style="page-break-before:always">
+<ol start="16" class="example" style="list-style-type: decimal">
+<li><code>attributes(die)</code> 를 수행했더니 <code>$names</code> 항목이 발견되었다. 이 속성을 없애고자 할 때 적당한 코드는?</li>
+</ol>
 <p>가. <code>names(die) &lt;- &quot;&quot;</code></p>
 <p>나. <code>names(die) &lt;- NA</code></p>
 <p>다. <code>names(die) &lt;- NULL</code></p>
 <p>라. <code>names(die) &lt;- NaN</code></p>
-<p>3.5 <code>dim(die) &lt;- c(2, 3)</code>를 수행하였을 때 <code>class(die)</code> 는 무엇인가?</p>
+<ol start="17" class="example" style="list-style-type: decimal">
+<li><code>dim(die) &lt;- c(2, 3)</code>를 수행하였을 때 <code>class(die)</code> 는 무엇인가?</li>
+</ol>
 <p>가. <code>[1] &quot;integer&quot;</code></p>
 <p>나. <code>[1] &quot;vector&quot;</code></p>
 <p>다. <code>[1] &quot;matrix&quot;</code></p>
 <p>라. <code>[1] &quot;array&quot;</code></p>
-<p>3.6 <code>today &lt;- Sys.Date() ; class(today)</code> 의 결과는?</p>
+<ol start="18" class="example" style="list-style-type: decimal">
+<li><code>today &lt;- Sys.Date() ; class(today)</code> 의 결과는?</li>
+</ol>
 <p>가. <code>[1] &quot;integer&quot;</code></p>
 <p>나. <code>[1] &quot;Date&quot;</code></p>
 <p>다. <code>[1] &quot;matrix&quot;</code></p>
 <p>라. <code>[1] &quot;array&quot;</code></p>
-<p>3.7 <code>gender &lt;- factor(c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;))</code> 를 수행하고 <code>unclass(gender)</code>를 수행하면 그 결과는?</p>
+<ol start="19" class="example" style="list-style-type: decimal">
+<li><code>gender &lt;- factor(c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;))</code> 를 수행하고 <code>unclass(gender)</code>를 수행하면 그 결과는?</li>
+</ol>
 <p>가. <code>[1] 2 1 1 2</code></p>
 <p>나. <code>[1] &quot;integer&quot;</code></p>
 <p>다.</p>
@@ -240,13 +281,16 @@ Levels: female male</code></pre>
 
 $class
 [1] &quot;factor&quot;</code></pre>
+<P style="page-break-before:always">
 </div>
-<div id="list-and-data-frame" class="section level4">
-<h4>4. list and data frame</h4>
+<div id="iv.-list-and-data-frame" class="section level4">
+<h4>IV. list and data frame</h4>
 <ul>
 <li><code>list2 &lt;- list(number = 100:130, char = &quot;R&quot;, logical = list(TRUE, FALSE))</code> 에서</li>
 </ul>
-<p>4.1 <code>list2[[2]]</code> 의 결과는 무엇인가?</p>
+<ol start="20" class="example" style="list-style-type: decimal">
+<li><code>list2[[2]]</code> 의 결과는 무엇인가?</li>
+</ol>
 <p>가.</p>
 <pre><code>$char
 [1] &quot;R&quot;</code></pre>
@@ -255,7 +299,9 @@ $class
 <pre><code>$R
 [1] &quot;char&quot;</code></pre>
 <p>라. <code>[1] &quot;char&quot;</code></p>
-<p>4.2 <code>list2[2]</code> 의 결과는 무엇인가?</p>
+<ol start="21" class="example" style="list-style-type: decimal">
+<li><code>list2[2]</code> 의 결과는 무엇인가?</li>
+</ol>
 <p>가.</p>
 <pre><code>$char
 [1] &quot;R&quot;</code></pre>
@@ -264,16 +310,21 @@ $class
 <pre><code>$R
 [1] &quot;char&quot;</code></pre>
 <p>라. <code>[1] &quot;char&quot;</code></p>
-<p>4.3 다음 중 그 결과가 다른 것 하나를 고르시오.</p>
+<ol start="22" class="example" style="list-style-type: decimal">
+<li>다음 중 그 결과가 다른 것 하나를 고르시오.</li>
+</ol>
 <p>가. <code>list2$logical</code></p>
 <p>나. <code>list2[[3]]</code></p>
 <p>다. <code>list2[3]</code></p>
 <p>라. <code>list2[3][[1]]</code></p>
-<p>4.4 <code>logical</code> 중 첫번쨰 <code>TRUE</code> 를 불러내는 코드는 무엇인가? (즉, <code>[1] TRUE</code> 가 나오는 코드는?)</p>
+<ol start="23" class="example" style="list-style-type: decimal">
+<li><code>logical</code> 중 첫번쨰 <code>TRUE</code> 를 불러내는 코드는 무엇인가? (즉, <code>[1] TRUE</code> 가 나오는 코드는?)</li>
+</ol>
 <p>가. <code>list2[3][[1]][[1]]</code></p>
 <p>나. <code>list2[3][[1]][1]</code></p>
 <p>다. <code>list2[3][1][1]</code></p>
 <p>라. <code>list2[3][1][[1]]</code></p>
+<P style="page-break-before:always">
 <ul>
 <li><p><code>df</code>를 다음과 같이 정의할 때</p>
 <pre><code>df &lt;- data.frame(face = c(&quot;ace&quot;, &quot;two&quot;, &quot;six&quot;), 
@@ -282,7 +333,9 @@ $class
 </code>
 </pre></li>
 </ul>
-<p>4.5 <code>str(df)</code>의 결과를 올바르게 나타낸 것은?</p>
+<ol start="24" class="example" style="list-style-type: decimal">
+<li><code>str(df)</code>의 결과를 올바르게 나타낸 것은?</li>
+</ol>
 <p>가.</p>
 <pre><code>
 'data.frame':   3 obs. of  3 variables:
@@ -311,7 +364,10 @@ $class
  $ suit : chr &quot;clubs&quot;: 1 1 1
  $ value: num  1 2 6
 </code></pre>
-<p>4.6 <code>df</code>의 정의에 <code>stringsAsFactors = FALSE</code>를 추가하면 <code>str(df)</code> 는 어떻게 나오는가?</p>
+<P style="page-break-before:always">
+<ol start="25" class="example" style="list-style-type: decimal">
+<li><code>df</code>의 정의에 <code>stringsAsFactors = FALSE</code>를 추가하면 <code>str(df)</code> 는 어떻게 나오는가?</li>
+</ol>
 <p>가.</p>
 <pre><code>
 'data.frame':   3 obs. of  3 variables:
@@ -340,11 +396,14 @@ $class
  $ suit : chr &quot;clubs&quot;: 1 1 1
  $ value: num  1 2 6
 </code></pre>
+<P style="page-break-before:always">
 <ul>
 <li>다음 그림과 같은 구조를 갖는<code>cards.csv</code>의 URL이 <code>https://raw.githubusercontent.com/coop711/r_programming/master/data/cards.csv</code> 라고 하자.</li>
 </ul>
 <p>      <img src="data:image/png;base64,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" /></p>
-<p>4.7 이를 읽어서 <code>deck</code>에 저장하는 코드로 적절한 것은? 단, <code>string</code>은 <code>character</code>로 읽어들인다.</p>
+<ol start="26" class="example" style="list-style-type: decimal">
+<li>이를 읽어서 <code>deck</code>에 저장하는 코드로 적절한 것은? 단, <code>string</code>은 <code>character</code>로 읽어들인다.</li>
+</ol>
 <p>가.</p>
 <pre><code>url &lt;- &quot;https://raw.githubusercontent.com/coop711/r_programming/master/data/cards.csv&quot;
 deck &lt;- read.csv(url)</code></pre>
@@ -357,25 +416,111 @@ deck &lt;- read.csv(url, stringsAsaaFactors = FALSE)</code></pre>
 <p>라.</p>
 <pre><code>url &lt;- https://raw.githubusercontent.com/coop711/r_programming/master/data/cards.csv
 deck &lt;- read.csv(url, stringsAsaaFactors = FALSE)</code></pre>
-<p>4.8 위와 같이 읽어들인 <code>deck</code>을 작업 디렉토리와 같은 위치에 있는 <code>data</code> 폴더에 <code>cards.csv</code>라는 이름으로 저장하고자 한다. 단, 첫 열에 나오는 일련번호를 없애고자 할 때 적절한 코드는?</p>
+<ol start="27" class="example" style="list-style-type: decimal">
+<li>위와 같이 읽어들인 <code>deck</code>을 작업 디렉토리와 같은 위치에 있는 <code>data</code> 폴더에 <code>cards.csv</code>라는 이름으로 저장하고자 한다. 단, 첫 열에 나오는 일련번호를 없애고자 할 때 적절한 코드는?</li>
+</ol>
 <p>가. <code>write.csv(deck, file = &quot;../data/cards.csv&quot;)</code></p>
 <p>나. <code>write.csv(deck, file = &quot;../data/cards.csv&quot;, row.names = FALSE)</code></p>
 <p>다. <code>save(deck, file = &quot;../data/cards.csv&quot;)</code></p>
 <p>라. <code>save(deck, file = &quot;../data/cards.csv&quot;, row.names = FALSE)</code></p>
-<p>4.9 현재 작업 디렉토리에 있는 모든 오브젝트를 <code>r_objects.RData</code> 라는 파일로 저장하고자 한다. 적절하지 않은 것은?</p>
+<ol start="28" class="example" style="list-style-type: decimal">
+<li>현재 작업 디렉토리에 있는 모든 오브젝트를 <code>r_objects.RData</code> 라는 파일로 저장하고자 한다. 적절하지 않은 것은?</li>
+</ol>
 <p>가. <code>save(list = ls(), file = &quot;./r_objects.RData&quot;)</code></p>
 <p>나. <code>save.image(list = ls(), file = &quot;./r_objects.RData&quot;)</code></p>
 <p>다. <code>save.image(file = &quot;./r_objects.RData&quot;)</code></p>
 <p>라. <code>save.image(&quot;./r_objects.RData&quot;)</code></p>
-<p>4.10 4.9에서 저장한 <code>r_objects.RData</code> 를 불러오는 코드로 적절한 것은?</p>
+<P style="page-break-before:always">
+<ol start="29" class="example" style="list-style-type: decimal">
+<li>위에서 저장한 <code>r_objects.RData</code> 를 불러오는 코드로 적절한 것은?</li>
+</ol>
 <p>가. <code>load(&quot;./r_objects.RData&quot;)</code></p>
 <p>나. <code>read(&quot;./r_objects.RData&quot;)</code></p>
 <p>다. <code>get(&quot;./r_objects.RData&quot;)</code></p>
 <p>라. <code>dget(&quot;./r_objects.RData&quot;)</code></p>
 </div>
-<div id="modifying-values" class="section level4">
-<h4>5. Modifying Values</h4>
-<p>5.1</p>
+<div id="v.-notation" class="section level4">
+<h4>V. Notation</h4>
+<ol start="30" class="example" style="list-style-type: decimal">
+<li>앞에서 정의한 <code>deck</code>에서 맨 처음 카드를 뽑아 <code>face</code>, <code>suit</code>, <code>value</code> 를 다 보고자 한다. 이 때 필요한 코드는?</li>
+</ol>
+<p>가. <code>deck[1, ]</code></p>
+<p>나. <code>deck[, 1]</code></p>
+<p>다. <code>deck[1, 1]</code></p>
+<p>라. <code>deck[1, 1, drop = FALSE]</code></p>
+<ol start="31" class="example" style="list-style-type: decimal">
+<li>다음 중 그 효과가 나머지 셋과 같지 않은 것은?</li>
+</ol>
+<p>가.<code>sample(1:52, size = 52, replace = TRUE)</code></p>
+<p>나.<code>sample(1:52, size = 52)</code></p>
+<p>다.<code>sample(1:52)</code></p>
+<p>라.<code>sample(52)</code></p>
+</div>
+<div id="vi.-modifying-values" class="section level4">
+<h4>VI. Modifying Values</h4>
+<ol start="32" class="example" style="list-style-type: decimal">
+<li><code>vec &lt;- 1:6</code> 에 7번째 원소를 추가하려다가 실수로 <code>vec[8] &lt;- 7</code>이라고 입력하여 7번째 원소만 없애고자 할 때 적합한 코드는 ?</li>
+</ol>
+<p>가. <code>vec[7] &lt;- &quot;&quot;</code></p>
+<p>나. <code>vec[7] &lt;- NULL</code></p>
+<p>다. <code>vec[7] &lt;- NaN</code></p>
+<p>라. <code>vec &lt;- vec[-7]</code></p>
+<ol start="33" class="example" style="list-style-type: decimal">
+<li>위의 <code>deck</code>에서 매 13번째 카드의 value 를 찾아보는 코드로 적합치 않은 것은?</li>
+</ol>
+<p>가. <code>deck2$value[seq(13, 52, by = 13), ]</code></p>
+<p>나. <code>deck2[seq(13, 52, by = 13), &quot;value&quot;]</code></p>
+<p>다. <code>deck2[seq(13, 52, by = 13), 3]</code></p>
+<p>라. <code>deck2[seq(13, 52, by = 13), c(FALSE, FALSE, TRUE)]</code></p>
+<ol start="34" class="example" style="list-style-type: decimal">
+<li><code>c(1, 2, 3, 4) %in% c(3, 4, 5)</code>의 결과는 ?</li>
+</ol>
+<p>가. <code>[1] TRUE  TRUE  FALSE</code></p>
+<p>나. <code>[1] FALSE FALSE  TRUE  TRUE</code></p>
+<p>다. <code>[1] TRUE TRUE  FALSE  FALSE</code></p>
+<p>라. <code>[1] 3 4</code></p>
+<ol start="35" class="example" style="list-style-type: decimal">
+<li><code>a &lt;- c(1, 2, 3)</code>, <code>b &lt;- c(1, 2, 3)</code>, <code>c &lt;- c(1, 2, 4)</code> 라 할 때 <code>a == b &amp; b == c</code> 의 결과는 무엇인가?</li>
+</ol>
+<p>가. <code>[1] TRUE TRUE TRUE</code></p>
+<p>나. <code>[1] TRUE TRUE FALSE</code></p>
+<p>다. <code>[1] TRUE FALSE TRUE</code></p>
+<p>라. <code>[1] FALSE TRUE TRUE</code></p>
+<ol start="36" class="example" style="list-style-type: decimal">
+<li>잘 섞인 카드 <code>deck3</code>에서 <code>ace</code> 가 몇 번째 자리에 있는지 알아보는 코드로 적절한 것은 다음 중 어느 것인가?</li>
+</ol>
+<p>가. <code>deck3$face == &quot;ace&quot;</code></p>
+<p>나. <code>which(deck3$face == &quot;ace&quot;)</code></p>
+<p>다. <code>deck3$face = &quot;ace&quot;</code></p>
+<p>라. <code>which(deck3$face = &quot;ace&quot;</code></p>
+<ol start="37" class="example" style="list-style-type: decimal">
+<li>위의 <code>deck3</code>에서 <code>ace</code>가 들어 있는 카드를 모두 뽑아 보는 코드로 적합한 것은?</li>
+</ol>
+<p>가. <code>deck3[deck3$face == &quot;ace&quot;, ]</code></p>
+<p>나. <code>deck3[deck3$face = &quot;ace&quot;, ]</code></p>
+<p>다. <code>deck3[deck3$face == &quot;ace&quot;]</code></p>
+<p>라. <code>deck3[deck3$face = &quot;ace&quot;]</code></p>
+<ol start="38" class="example" style="list-style-type: decimal">
+<li>위의 <code>deck3</code>에서 <code>face</code>가 <code>king, queen, jack</code>인 것들의 위치를 찾기 위한 코드로 적절한 것은?</li>
+</ol>
+<p>가. <code>deck3$face == c(&quot;king&quot;, &quot;queen&quot;, &quot;jack&quot;)</code></p>
+<p>나. <code>deck3$face %in% c(&quot;king&quot;, &quot;queen&quot;, &quot;jack&quot;)</code></p>
+<p>다. <code>deck3$face = c(&quot;king&quot;, &quot;queen&quot;, &quot;jack&quot;)</code></p>
+<p>라. <code>deck3$face &amp;&amp; c(&quot;king&quot;, &quot;queen&quot;, &quot;jack&quot;)</code></p>
+<ol start="39" class="example" style="list-style-type: decimal">
+<li>위의 위치를 <code>facecard</code>라는 R object로 저장하였다. 이 카드들의 <code>value</code>를 모두 10으로 바꾸는 코드로 적절치 않은 것은?</li>
+</ol>
+<p>가. <code>deck3[facecard, &quot;value&quot;] &lt;- 10</code></p>
+<p>나. <code>deck3$value[facecard] &lt;- 10</code></p>
+<p>다. <code>deck3$value[facecard, ] &lt;- 10</code></p>
+<p>라. <code>deck3[facecard, 3] &lt;- 10</code></p>
+<ol start="40" class="example" style="list-style-type: decimal">
+<li>다음 중 그 연산의 결과가 다른 것은?</li>
+</ol>
+<p>가. <code>any(TRUE, TRUE, NA)</code></p>
+<p>나. <code>all(TRUE, TRUE, NA)</code></p>
+<p>다. <code>any(FALSE, TRUE, NA)</code></p>
+<p>라. <code>all(TRUE, TRUE, TRUE)</code></p>
 </div>
 
 
