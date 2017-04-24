@@ -192,11 +192,14 @@ mil
 ## Factors
 gender <- factor(c("male", "female", "female", "male"))
 typeof(gender)
+class(gender)
 attributes(gender)
 unclass(gender)
 gender
 as.character(gender)
-gender2 <- factor(c("male", "female", "female", "male"), levels = c("male", "female"))
+gender2 <- factor(c("male", "female", "female", "male"), 
+                  levels = c("male", "female"),
+                  labels = c("M", "F"))
 str(gender2)
 ## Coercion
 card <- c("ace", "hearts", 1)
@@ -210,12 +213,17 @@ as.numeric(FALSE)
 list1 <- list(100:130, "R", list(TRUE, FALSE))
 list1
 attributes(list1)
-list2 <- list(number = 100:130, char = "R", logical = list(TRUE, FALSE))
+list2 <- list(number = 100:130, 
+              char = "R", 
+              logical = list(TRUE, FALSE))
 list2
 attributes(list2)
 ## Data Frames
-df1 <- data.frame(c("ace", "two", "six"), rep("clubs", 3 ), c(1, 2, 6))
+df1 <- data.frame(c("ace", "two", "six"), 
+                  rep("clubs", 3 ), 
+                  c(1, 2, 6))
 df1
+str(df1)
 df <- data.frame(face = c("ace", "two", "six"), 
                  suit = rep("clubs", 3), 
                  value = c(1, 2, 6))
@@ -225,11 +233,15 @@ face <- c("ace", "two", "six")
 suit <- rep("clubs", 3)
 value <- c(1, 2, 6)
 str(face)
-df2 <- data.frame(face, suit, value, stringsAsFactors = FALSE)
+df2 <- data.frame(face, suit, value)
+str(df2)
+df2 <- data.frame(face, suit, value, 
+                  stringsAsFactors = FALSE)
 df2
 str(df2)
 df3 <- data.frame(Face = face, Suit = suit, Value = value)
 df3
+str(df3)
 typeof(df)
 class(df)
 attributes(df)
@@ -240,7 +252,8 @@ df <- data.frame(face = c("ace", "two", "six"),
                  stringsAsFactors = FALSE)
 str(df)
 ## from URL
-deck <- read.csv("https://gist.githubusercontent.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv")
+url1 <- "https://gist.githubusercontent.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv"
+deck <- read.csv(url1)
 str(deck)
 head(deck)
 tail(deck)
@@ -262,7 +275,8 @@ rm(list = ls())
 read.csv("../data/cards.csv")
 deck <- read.csv("../data/cards.csv")
 str(deck)
-deck <- read.csv("../data/cards.csv", stringsAsFactors = FALSE)
+deck <- read.csv("../data/cards.csv", 
+                 stringsAsFactors = FALSE)
 str(deck)
 head(deck)
 ## Positive Integers
@@ -319,7 +333,9 @@ str(deck)
 deck$value
 mean(deck$value)
 median(deck$value)
-lst <- list(numbers = c(1, 2), logical = TRUE, strings = c("a", "b", "c"))
+lst <- list(numbers = c(1, 2), 
+            logical = TRUE, 
+            strings = c("a", "b", "c"))
 lst
 lst[1]
 lst$numbers
