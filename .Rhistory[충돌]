@@ -1,0 +1,512 @@
+c(1, 2, 3, NA) == NA
+vec <- c(1, 2, 3, NA)
+is.na(vec)
+which(is.na(vec))
+deck5$value[deck$face == "ace"] <- NA
+sink(file = "./output.txt")
+read.csv("../data/cards.csv")
+deck <- read.csv("../data/cards.csv")
+str(deck)
+deck <- read.csv("../data/cards.csv",
+stringsAsFactors = FALSE)
+str(deck)
+head(deck)
+vec <- c(6, 1, 3, 6, 10, 5)
+vec[1:3]
+deck[1, 1]
+deck[1, 1:3]
+new <- deck[1, 1:3]
+new
+str(new)
+str(deck[1, 1])
+deck[1, 1, drop = FALSE]
+str(deck[1, 1, drop = FALSE])
+str(deck[1, 1:3])
+deck[1:3, 1]
+str(deck[1:3, 1])
+deck[1:3, 1, drop = FALSE]
+str(deck[1:3, 1, drop = FALSE])
+deck[-1, 1:3]
+deck[-(2:52), 1:3]
+deck[1, ]
+deck[ , 1]
+deck[ , 1, drop = FALSE]
+deck[1, c(TRUE, TRUE, FALSE)]
+rows <- c(TRUE, rep(FALSE, 51))
+deck[rows, ]
+deck[1, c("face", "suit", "value")]
+deck[ , "value"]
+deck[, 3]
+deck[, -(1:2)]
+deck[, c(FALSE, FALSE, TRUE)]
+deck[ , "value", drop = FALSE]
+deal <- function(cards) {
+cards[1, ]
+}
+deal(deck)
+deck2 <- deck[1:52, ]
+head(deck2)
+deck2 <- deck[52:1, ]
+head(deck2)
+deck3 <- deck[c(2, 1, 3:52), ]
+head(deck3)
+deal(deck3)
+random <- sample(1:52, size = 52)
+random
+deck4 <- deck[random, ]
+head(deck4)
+shuffle <- function(cards) {
+random <- sample(1:52, size = 52)
+cards[random, ]
+}
+deal(deck)
+deck2 <- shuffle(deck)
+deal(deck2)
+str(deck)
+deck$value
+mean(deck$value)
+median(deck$value)
+lst <- list(numbers = c(1, 2),
+logical = TRUE,
+strings = c("a", "b", "c"))
+lst[1]
+lst$numbers
+lst[[1]]
+lst["numbers"]
+lst[["numbers"]]
+dump(list = c("deal", "shuffle"), file = "shuffle.R")
+save.image(file = "./r_notation.RData")
+sink()
+source('~/Google 드라이브/Works/Class/Data_Science/R.WD/r_programming/R/R_Notation.R', echo=TRUE)
+# R Notation
+## read.csv
+sink(file = "../docs/output.txt")
+read.csv("../data/cards.csv")
+deck <- read.csv("../data/cards.csv")
+str(deck)
+deck <- read.csv("../data/cards.csv",
+stringsAsFactors = FALSE)
+str(deck)
+head(deck)
+## Positive Integers
+vec <- c(6, 1, 3, 6, 10, 5)
+vec[1:3]
+deck[1, 1]
+deck[1, 1:3]
+new <- deck[1, 1:3]
+new
+str(new)
+str(deck[1, 1])
+deck[1, 1, drop = FALSE]
+str(deck[1, 1, drop = FALSE])
+str(deck[1, 1:3])
+deck[1:3, 1]
+str(deck[1:3, 1])
+deck[1:3, 1, drop = FALSE]
+str(deck[1:3, 1, drop = FALSE])
+## Negative Integers
+deck[-1, 1:3]
+deck[-(2:52), 1:3]
+## Blank Spaces
+deck[1, ]
+deck[ , 1]
+deck[ , 1, drop = FALSE]
+## Logical Values
+deck[1, c(TRUE, TRUE, FALSE)]
+rows <- c(TRUE, rep(FALSE, 51))
+deck[rows, ]
+## Names
+deck[1, c("face", "suit", "value")]
+deck[ , "value"]
+deck[, 3]
+deck[, -(1:2)]
+deck[, c(FALSE, FALSE, TRUE)]
+deck[ , "value", drop = FALSE]
+deal <- function(cards) {
+cards[1, ]
+}
+deal(deck)
+deck2 <- deck[1:52, ]
+head(deck2)
+deck2 <- deck[52:1, ]
+head(deck2)
+deck3 <- deck[c(2, 1, 3:52), ]
+head(deck3)
+deal(deck3)
+#set.seed(1)
+random <- sample(1:52, size = 52)
+random
+deck4 <- deck[random, ]
+head(deck4)
+shuffle <- function(cards) {
+random <- sample(1:52, size = 52)
+cards[random, ]
+}
+deal(deck)
+deck2 <- shuffle(deck)
+deal(deck2)
+## Dollar Signs and Double Brackets
+str(deck)
+deck$value
+mean(deck$value)
+median(deck$value)
+lst <- list(numbers = c(1, 2),
+logical = TRUE,
+strings = c("a", "b", "c"))
+lst[1]
+lst$numbers
+lst[[1]]
+lst["numbers"]
+lst[["numbers"]]
+dump(list = c("deal", "shuffle"), file = "shuffle.R")
+save.image(file = "./r_notation.RData")
+sink()
+library(pryr)
+install.packages("pryr")
+library(pryr)
+parenvs()
+parenvs(all = TRUE)
+?parenvcs
+?parenvs
+as.environment("package:stats")
+help(package = "pryr")
+globalenv()
+baseenv()
+emptyenv()
+parent.env(globalenv())
+parent.env(emptyenv())
+ls(emptyenv())
+ls(globalenv())
+head(globalenv()$deck, 3)
+?assign
+assign("new", "Hello Global", envir = globalenv())
+ls()
+globalenv()$new
+environment()
+new
+new <- "Hello Active"
+new
+show_env <- function(){
+list(ran.in = environment(),
+parent = parent.env(environment()),
+objects = ls.str(environment()))
+}
+show_env()
+?environment
+environment(show_env)
+environment(crimtab)
+environment(c)
+environment(hist)
+environment(show_env)
+environment(parenvs)
+show_env <- function(){
+a <- 1
+b <- 2
+c <- 3
+list(ran.in = environment(),
+parent = parent.env(environment()),
+objects = ls.str(environment()))
+}
+show_env()
+fix(show_env())
+fix(show_env
+fix(show_env)
+foo <- "take me to your runtime"
+fix(show_env)
+show_env()
+rm("foo")
+ls()
+fix(show_env)
+show_env()
+source("./R/shuffle.R")
+ls()
+deal
+deal2 <- function(){
+deck[1, ]
+}
+deal2()
+environment(deal2)
+head(deck, n = 3)
+DECK <- deck
+deck <- deck[-1, ]
+head(deck, n = 3)
+deal3 <- function(){
+card <- deck[1, ]
+deck <- deck[-1, ]
+card
+}
+deal3()
+deck
+card
+deal4()
+deal4 <- function(){
+card <- deck[1, ]
+assign("deck", deck[-1, ], envir = globalenv())
+card
+}
+deal4()
+head(deck, 6)
+deal4()
+head(deck, 6)
+deal4()
+head(deck, 6)
+shuffle
+head(deck, 3)
+a <- shuffle(deck)
+head(deck, 3)
+ehad(a, 3)
+head(a, 3)
+ls()
+shuffle2 <- function{
+random <- sample(1:52)
+assign("deck", DECK[random, ], envir = globalenv())
+}
+shuffle2 <- function(){
+random <- sample(1:52)
+assign("deck", DECK[random, ], envir = globalenv())
+}
+shuffle2()
+head(DECK)
+shuffle2()
+DECK
+deck
+shuffle()
+shuffle2()
+deal()
+deal4()
+setup <- function(deck) {
+DECK <- deck
+DEAL <- function(){
+card <- DECK[1, ]
+assign("deck", DECK[-1, ], envir = globalenv())
+card
+}
+SHUFFLE <- function(){
+random <- sample(1:52)
+assign("deck", DECK[random, ], envir = globalenv())
+}
+setup()
+ls()
+setwd("~/Google 드라이브/Works/Class/Data_Science/R.WD/r_programming/R")
+install.packages(c("rmarkdown", "viridis"))
+install.packages(c("assertthat", "chron", "cluster", "commonmark", "curl", "DBI", "jsonlite", "lattice", "NLP", "psych", "qdapRegex", "Rcpp", "rmarkdown", "shiny", "sourcetools", "stringi", "stringr", "survival", "tibble", "tm", "XML", "zoo"), lib="/Library/Frameworks/R.framework/Versions/3.3/Resources/library")
+?cat
+setwd("~/Google 드라이브/Works/Class/Data_Science/R.WD/r_programming/R")
+cat(file = "../data/cards.csv")
+print(file = "../data/cards.csv")
+?readline
+?readLines
+readlines("../data/cards.csv")
+readLines("../data/cards.csv")
+dir("../data")
+?dir
+read.csv("../data/cards.csv")
+deck <- read.csv("https://gist.githubusercontent.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv",
+stringsAsFactors = FALSE)
+str(deck)
+write.csv(deck, file = "../data/cards.csv",
+row.names = FALSE)
+cat(file = "../data/cards.csv")
+readLines("../data/cards.csv")
+print(file = "../data/cards.csv")
+read.csv("../data/cards.csv")
+setwd("~/Google 드라이브/Works/Class/Data_Science/R.WD/r_programming/R")
+read.csv(file = "../data/cards.csv")
+?read.csv
+deck <- read.csv("https://gist.githubusercontent.com/garrettgman/9629323/raw/ee5dfc039fd581cb467cc69c226ea2524913c3d8/deck.csv",
+stringsAsFactors = FALSE)
+str(deck)
+write.csv(deck, file = "../data/cards.csv",
+row.names = FALSE)
+read.csv(file = "../data/cards.csv")
+readLines("../data/cards.csv")
+cat("../data/cards.csv")
+?readLines
+readLines("../data/cards.csv", n = 6)
+print("../data/cards.csv")
+print(paste("../data/cards.csv"))
+read.delim(file = "../data/cards.csv", sep = ",")
+?read.delim
+read.table(file = "../data/cards.csv", sep = ",", quote = "\"'")
+read.table(file = "../data/cards.csv", heasder = TRUE, sep = "", quote = "\"'")
+read.table(file = "../data/cards.csv", header = TRUE, sep = "", quote = "\"'")
+read.table(file = "../data/cards.csv", header = TRUE, sep = "", quote = "")
+read.table(file = "../data/cards.csv", sep = "", quote = "", row.names = NULL)
+print(read.table(file = "../data/cards.csv", sep = "", quote = "", row.names = NULL))
+?print
+print(read.table(file = "../data/cards.csv", sep = "", quote = "", row.names = NULL), justify = "left")
+print(read.table(file = "../data/cards.csv", sep = "", quote = "", row.names = NULL), justify = "right")
+print(read.table(file = "../data/cards.csv", sep = "", quote = ""), justify = "right")
+print(read.table(file = "../data/cards.csv", sep = ",", quote = ""), justify = "right")
+print(read.table(file = "../data/cards.csv", sep = "", quote = "", colClasses = rep("character", 3)), justify = "center")
+print(read.table(file = "../data/cards.csv", sep = "", quote = "", colClasses = rep("character", 1)), justify = "center")
+print(read.table(file = "../data/cards.csv", sep = "", quote = "", colClasses = rep("character", 1)), justify = "left")
+5 %% 2
+5 %/% 2
+?`;`
+die <- 1:6
+typeof(die)
+gender <- factor(c("male", "female", "female", "male"))
+unclass(gender)
+list2 <- list(number = 100:130, char = "R", logical = list(TRUE, FALSE))
+list2[[3]][1][[1]]
+list2[3][1][[1]]
+list2[3]
+list2[3][1]
+list2[3][1][[1]]
+list2[3][[1]][[1]]
+list2[3][[1]][1]
+list2[3][1][1]
+list2[3][1][[1]]
+ㅁㅁ <- 1:3
+ㅠㅠ <- 1:3
+a <- 1:3
+b <- 1:3
+c <- c(1, 2, 4)
+a == b & b == c
+any(TRUE, TRUE, NA)
+any(FALSE, TRUE, NA)
+all(TRUE, TRUE, NA)
+all(TRUE, TRUE, TRUE)
+setwd("~/Google 드라이브/Works/Class/Data_Science/R.WD/r_programming/R")
+library(pryr)
+parenvs(all = TRUE)
+as.environment("package:stats")
+globalenv()
+baseenv()
+emptyenv()
+parent.env(globalenv())
+parent.env(emptyenv())
+ls(emptyenv())
+ls(globalenv())
+ls()
+ls(emptyenv())
+ls(globalenv())
+head(globalenv()$deck, 3)
+assign("new", "Hello Global", envir = globalenv())
+ls()
+globalenv()$new
+load("./r_modifying_values.RData")
+ls()
+ls(globalenv())
+head(globalenv()$deck, 3)
+globalenv()
+baseenv()
+emptyenv()
+parent.env(globalenv())
+parent.env(emptyenv())
+ls(emptyenv())
+ls(globalenv())
+head(globalenv()$deck, 3)
+assign("new", "Hello Global", envir = globalenv())
+ls()
+globalenv()$new
+environment()
+new
+new <- "Hello Active"
+new
+roll <- function(){
+die <- 1:6
+dice <- sample(die, size = 2, replace = TRUE)
+sum(dice)
+}
+show_env <- function(){
+list(ran.in = environment(),
+parent = parent.env(environment()),
+objects = ls.str(environment()))
+}
+show_env()
+environment()
+show_env()
+show_env <- function(){
+list(ran.in = environment(),
+parent = parent.env(environment()),
+objects = ls.str(environment()))
+}
+show_env()
+environment(show_env)
+environment(parenvs)
+show_env <- function(){
+a <- 1
+b <- 2
+c <- 3
+list(ran.in = environment(),
+parent = parent.env(environment()),
+objects = ls.str(environment()))
+}
+show_env()
+environment(show_env)
+environment(parenvs)
+show_env <- function(){
+a <- 1
+b <- 2
+c <- 3
+list(ran.in = environment(),
+parent = parent.env(environment()),
+objects = ls.str(environment()))
+}
+show_env()
+foo <- "take me to your runtime"
+fix(show_env)
+show_env()
+fix(show_env)
+show_env()
+deal2 <- function(){
+deck[1, ]
+}
+deal2()
+environment(deal2)
+deck <- deck[-1, ]
+head(deck, n = 3)
+deal3 <- function(){
+card <- deck[1, ]
+deck <- deck[-1, ]
+card
+}
+deal3()
+head(deck, n = 6)
+deal4 <- function(){
+card <- deck[1, ]
+assign("deck", deck[-1, ], envir = globalenv())
+card
+}
+deal4()
+head(deck, 6)
+deal4()
+head(deck, 6)
+source("./R/shuffle.R")
+source("./shuffle.R")
+shuffle
+head(deck, 3)
+a <- shuffle(deck)
+head(deck, 3)
+head(a, 3)
+shuffle2 <- function(){
+random <- sample(1:52)
+assign("deck", DECK[random, ], envir = globalenv())
+}
+shuffle2()
+shuffle2 <- function(){
+random <- sample(1:52)
+assign("deck", deck[random, ], envir = globalenv())
+}
+shuffle2()
+DECK
+deck
+setup <- function(deck) {
+DECK <- deck
+DEAL <- function(){
+card <- deck[1, ]
+assign("deck", deck[-1, ], envir = globalenv())
+card
+}
+SHUFFLE <- function(){
+random <- sample(1:52)
+assign("deck", DECK[random, ], envir = globalenv())
+}
+list(deal = DEAL, shuffle = SHUFFLE)
+}
+cards <- setup(deck)
+ls()
+deck
+nrow(deck)

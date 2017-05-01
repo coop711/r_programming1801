@@ -128,27 +128,27 @@ $(document).ready(function () {
 <h4>I. Dice</h4>
 <p># <code>die &lt;- 1:6</code> 를 실행하였다. 다음 물음에 답하시오.</p>
 <ol class="example" style="list-style-type: decimal">
-<li><p>다음 코드 중 에러 메시지가 나올 것으로 예상되는 것은?</p>
+<li><p>다음 코드 중 에러 메시지가 나올 것으로 예상되는 것은? (라)</p>
 <p>가. <code>die + 1</code></p>
 <p>나. <code>die + 1:2</code></p>
 <p>다. <code>die + 1:3</code></p>
 <p>라. <code>die + 1:4</code></p></li>
-<li><p>다음 중 그 결과가 다른 것을 하나 고르시오.</p>
+<li><p>다음 중 그 결과가 다른 것을 하나 고르시오. (라)</p>
 <p>가. <code>die * die</code></p>
 <p>나. <code>die ^ 2</code></p>
 <p>다. <code>die ** 2</code></p>
 <p>라. <code>die %*% die</code></p></li>
-<li><p><code>die / die</code> 의 계산 결과는 콘솔에 어떻게 나타나는가?</p>
+<li><p><code>die / die</code> 의 계산 결과는 콘솔에 어떻게 나타나는가? (라)</p>
 <p>가. <code>1</code></p>
 <p>나. <code>[1] 1</code></p>
 <p>다. <code>1 1 1 1 1 1</code></p>
 <p>라. <code>[1] 1 1 1 1 1 1</code></p></li>
-<li><p><code>die</code>의 각 원소를 5로 나눈 나머지를 나타내는 코드는 어느 것인가?</p>
+<li><p><code>die</code>의 각 원소를 5로 나눈 나머지를 나타내는 코드는 어느 것인가? (가)</p>
 <p>가. <code>die %% 5</code></p>
 <p>나. <code>die %/% 5</code></p>
 <p>다. <code>die %*% 5</code></p>
 <p>라. <code>die %o% 5</code></p></li>
-<li><p>사칙 연산자 중 <code>*</code> 에 대한 도움말을 구하고자 할 때 옳지 않은 것은?</p>
+<li><p>사칙 연산자 중 <code>*</code> 에 대한 도움말을 구하고자 할 때 옳지 않은 것은? (가)</p>
 <p>가. <code>help(*)</code></p>
 <p>나. <code>help(&quot;*&quot;)</code></p>
 <p>다. <code>?</code>`<code>*</code>`</p>
@@ -156,17 +156,17 @@ $(document).ready(function () {
 </ol>
 <P style="page-break-before:always">
 <ol start="6" class="example" style="list-style-type: decimal">
-<li><p>다음 중 나머지 셋과 다른 연산을 수행하고 있는 것은?</p>
+<li><p>다음 중 나머지 셋과 다른 연산을 수행하고 있는 것은? (라)</p>
 <p>가. <code>die %% 2</code></p>
 <p>나. <code>&quot;%%&quot;(die, 2)</code></p>
 <p>다. `<code>%%</code>`<code>(die, 2)</code></p>
 <p>라. `<code>%%</code>`<code>(2, die)</code></p></li>
-<li><p>공평한 주사위를 두 번 굴릴 때 나오는 결과를 표현한 코드로 적절한 것은?</p>
+<li><p>공평한 주사위를 두 번 굴릴 때 나오는 결과를 표현한 코드로 적절한 것은? (나)</p>
 <p>가. <code>sample(2, die)</code></p>
 <p>나. <code>sample(die, 2, replace = TRUE)</code></p>
 <p>다. <code>sample(die, 2, replace = FALSE)</code></p>
 <p>라. <code>sample(2, die, replace = TRUE)</code></p></li>
-<li><p><code>roll2</code>를 아래 글상자와 같이 정의한 함수라 할 때, 어떤 경우에 에러가 출력되는가?</p>
+<li><p><code>roll2</code>를 아래 글상자와 같이 정의한 함수라 할 때, 어떤 경우에 에러가 출력되는가? (라)</p>
 <p>가. <code>roll2(bones = 1:4)</code></p>
 <p>나. <code>roll2(bones = 1:5)</code></p>
 <p>다. <code>roll2(1:20)</code></p>
@@ -177,12 +177,12 @@ $(document).ready(function () {
   sum(dice)
 }</code></pre>
 <ol start="9" class="example" style="list-style-type: decimal">
-<li><p>위에서 정의한 <code>roll2</code>를 나중에 다시 불러들여 사용하기 위하여 저장할 때 적절한 코드는?</p>
+<li><p>위에서 정의한 <code>roll2</code>를 나중에 다시 불러들여 사용하기 위하여 저장할 때 적절한 코드는? (가)</p>
 <p>가. <code>dump(list = &quot;roll2&quot;, file = &quot;./roll2.R&quot;)</code></p>
 <p>나. <code>save(list = &quot;roll2&quot;, file = &quot;./roll2.R&quot;)</code></p>
 <p>다. <code>save.image(file = &quot;./roll2.R&quot;)</code></p>
 <p>라. <code>write(list = &quot;roll2&quot;, file = &quot;./roll2.R&quot;)</code></p></li>
-<li><p>위와 같이 저장한 <code>roll2</code>를 불러들이는 코드는 무엇인가? 작업디렉토리와 저장한 티덱토리가 같다고 가정하자.</p>
+<li><p>위와 같이 저장한 <code>roll2</code>를 불러들이는 코드는 무엇인가? 작업디렉토리와 저장한 디렉토리가 같다고 가정하자. (나)</p>
 <p>가. <code>read(&quot;./roll2.R&quot;)</code></p>
 <p>나. <code>source(&quot;./roll2.R&quot;)</code></p>
 <p>다. <code>load(&quot;./roll2.R&quot;)</code></p>
@@ -193,32 +193,32 @@ $(document).ready(function () {
 <div id="ii.-simulation" class="section level4">
 <h4>II. Simulation</h4>
 <ol start="11" class="example" style="list-style-type: decimal">
-<li><p>공평한 주사위 두 개를 던져 합을 구하는 게임을 20번 반복하는 코드는 다음 중 어느 것인가? 위에서 정의한 <code>roll2</code>를 이용하시오. 단, <code>roll2</code>는 위에 정의한 대로 임.</p>
+<li><p>공평한 주사위 두 개를 던져 합을 구하는 게임을 20번 반복하는 코드는 다음 중 어느 것인가? 위에서 정의한 <code>roll2</code>를 이용하시오. 단, <code>roll2</code>는 위에 정의한 대로 임. (나)</p>
 <p>가. <code>replicate(20, roll2())</code></p>
 <p>나. <code>replicate(20, roll2(bones = 1:6))</code></p>
 <p>다. <code>replicate(roll2(), 20)</code></p>
 <p>라. <code>replicate(roll2(bones = 1:6), 20)</code></p></li>
-<li><p>위의 실험을 1만번 반복하고, 그 결과를 <code>rolls</code>에 저장한 후 <code>ggplot</code> 패키지을 이용하여 간단한 히스토그램으로 나타내고자 한다. <code>ggplot</code>패키지는 설치되어 있고 <code>library</code>에 등록되어 있을 때 자료 특성에 비추어 가장 적절한 코드는?</p>
+<li><p>위의 실험을 1만번 반복하고, 그 결과를 <code>rolls</code>에 저장한 후 <code>ggplot</code> 패키지을 이용하여 간단한 히스토그램으로 나타내고자 한다. <code>ggplot</code>패키지는 설치되어 있고 <code>library</code>에 등록되어 있을 때 자료 특성에 비추어 가장 적절한 코드는? (라)</p>
 <p>가. <code>plot(rolls)</code></p>
 <p>나. <code>plot(rolls, binwidth = 1)</code></p>
 <p>다. <code>qplot(rolls)</code></p>
 <p>라. <code>qplot(rolls, binwidth = 1)</code></p></li>
-<li><p><code>roll</code>함수를 편집하여 확률 조건을 추가한 <code>roll.w</code>를 만들려고 할 때 필요한 코드는? (단, 여기서 <code>;</code> 는 그 다음 코드를 이어서 수행하라는 것이다.)</p>
-<p>가. <code>roll.w &lt;- roll ; fix(roll.w)</code></p>
-<p>나. <code>roll.w &lt;- roll ; vi(roll.w)</code></p>
-<p>다. <code>roll &lt;- roll.w ; fix(roll.w)</code></p>
-<p>라. <code>roll &lt;- roll.w ; vi(roll.w)</code></p></li>
+<li><p><code>roll2</code>함수를 편집하여 확률 조건을 추가한 <code>roll.w</code>를 만들려고 할 때 필요한 코드는? (가) (단, 여기서 <code>;</code> 는 그 다음 코드를 이어서 수행하라는 것이다.)</p>
+<p>가. <code>roll.w &lt;- roll2 ; fix(roll.w)</code></p>
+<p>나. <code>roll.w &lt;- roll2 ; vi(roll.w)</code></p>
+<p>다. <code>roll2 &lt;- roll.w ; fix(roll.w)</code></p>
+<p>라. <code>roll2 &lt;- roll.w ; vi(roll.w)</code></p></li>
 </ol>
 </div>
 <div id="iii.-r-objects" class="section level4">
 <h4>III. R Objects</h4>
 <ol start="14" class="example" style="list-style-type: decimal">
-<li><p><code>is.vector(5)</code> 의 답은 무엇인가?</p>
+<li><p><code>is.vector(5)</code> 의 답은 무엇인가? (가)</p>
 <p>가. <code>TRUE</code></p>
 <p>나. <code>FALSE</code></p>
 <p>다. <code>Yes</code></p>
 <p>라. <code>No</code></p></li>
-<li><p>위에서 저장해 놓은 <code>die</code>에 대해서 <code>typeof(die)</code>의 값은 무엇인가?</p>
+<li><p>위에서 저장해 놓은 <code>die</code>에 대해서 <code>typeof(die)</code>의 값은 무엇인가? (나)</p>
 <p>가. <code>&quot;logical&quot;</code></p>
 <p>나. <code>&quot;integer&quot;</code></p>
 <p>다. <code>&quot;double&quot;</code></p>
@@ -226,22 +226,22 @@ $(document).ready(function () {
 </ol>
 <P style="page-break-before:always">
 <ol start="16" class="example" style="list-style-type: decimal">
-<li><p><code>attributes(die)</code> 를 수행했더니 <code>$names</code> 항목이 발견되었다. 이 속성을 없애고자 할 때 적당한 코드는?</p>
+<li><p><code>attributes(die)</code> 를 수행했더니 <code>$names</code> 항목이 발견되었다. 이 속성을 없애고자 할 때 적당한 코드는? (다)</p>
 <p>가. <code>names(die) &lt;- &quot;&quot;</code></p>
 <p>나. <code>names(die) &lt;- NA</code></p>
 <p>다. <code>names(die) &lt;- NULL</code></p>
 <p>라. <code>names(die) &lt;- NaN</code></p></li>
-<li><p><code>dim(die) &lt;- c(2, 3)</code>를 수행하였을 때 <code>class(die)</code> 는 무엇인가?</p>
+<li><p><code>dim(die) &lt;- c(2, 3)</code>를 수행하였을 때 <code>class(die)</code> 는 무엇인가? (다)</p>
 <p>가. <code>[1] &quot;integer&quot;</code></p>
 <p>나. <code>[1] &quot;vector&quot;</code></p>
 <p>다. <code>[1] &quot;matrix&quot;</code></p>
 <p>라. <code>[1] &quot;array&quot;</code></p></li>
-<li><p><code>today &lt;- Sys.Date() ; class(today)</code> 의 결과는?</p>
+<li><p><code>today &lt;- Sys.Date() ; class(today)</code> 의 결과는? (나)</p>
 <p>가. <code>[1] &quot;integer&quot;</code></p>
 <p>나. <code>[1] &quot;Date&quot;</code></p>
 <p>다. <code>[1] &quot;matrix&quot;</code></p>
 <p>라. <code>[1] &quot;array&quot;</code></p></li>
-<li><p><code>gender &lt;- factor(c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;))</code> 를 수행하고 <code>unclass(gender)</code>를 수행하면 그 결과는?</p></li>
+<li><p><code>gender &lt;- factor(c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;))</code> 를 수행하고 <code>unclass(gender)</code>를 수행하면 그 결과는? (가)</p></li>
 </ol>
 <p>
 <pre><code>가. </code></pre>
@@ -262,7 +262,7 @@ Levels: female male</code></pre>
 <h4>IV. list and data frame</h4>
 <p># <code>list2 &lt;- list(number = 100:130, char = &quot;R&quot;, logical = list(TRUE, FALSE))</code> 에서</p>
 <ol start="20" class="example" style="list-style-type: decimal">
-<li><code>list2[[2]]</code> 의 결과는 무엇인가?</li>
+<li><code>list2[[2]]</code> 의 결과는 무엇인가? (나)</li>
 </ol>
 <p>
 <pre><code>가. </code></pre>
@@ -276,7 +276,7 @@ Levels: female male</code></pre>
 <pre><code>라. </code></pre>
 <pre><code>[1] &quot;char&quot;</code></pre>
 <ol start="21" class="example" style="list-style-type: decimal">
-<li><code>list2[2]</code> 의 결과는 무엇인가?</li>
+<li><code>list2[2]</code> 의 결과는 무엇인가? (가)</li>
 </ol>
 <p>
 <pre><code>가. </code></pre>
@@ -290,12 +290,12 @@ Levels: female male</code></pre>
 <pre><code>라. </code></pre>
 <pre><code>[1] &quot;char&quot;</code></pre>
 <ol start="22" class="example" style="list-style-type: decimal">
-<li><p>다음 중 그 결과가 다른 것 하나를 고르시오.</p>
+<li><p>다음 중 그 결과가 다른 것 하나를 고르시오. (다)</p>
 <p>가. <code>list2$logical</code></p>
 <p>나. <code>list2[[3]]</code></p>
 <p>다. <code>list2[3]</code></p>
 <p>라. <code>list2[3][[1]]</code></p></li>
-<li><p><code>logical</code> 중 첫번쨰 <code>TRUE</code> 를 불러내는 코드는 무엇인가? (즉, <code>[1] TRUE</code> 가 나오는 코드는?)</p>
+<li><p><code>logical</code> 중 첫번쨰 <code>TRUE</code> 를 불러내는 코드는 무엇인가? (즉, <code>[1] TRUE</code> 가 나오는 코드는?) (가)</p>
 <p>가. <code>list2[3][[1]][[1]]</code></p>
 <p>나. <code>list2[3][[1]][1]</code></p>
 <p>다. <code>list2[3][1][1]</code></p>
@@ -311,7 +311,7 @@ Levels: female male</code></pre>
 </code>
 </pre>
 <ol start="24" class="example" style="list-style-type: decimal">
-<li><code>str(df)</code>의 결과를 올바르게 나타낸 것은?</li>
+<li><code>str(df)</code>의 결과를 올바르게 나타낸 것은? (다)</li>
 </ol>
 <p>
 <pre><code>가. </code></pre>
@@ -346,7 +346,7 @@ Levels: female male</code></pre>
 <P style = "page-break-before:always">
 -->
 <ol start="25" class="example" style="list-style-type: decimal">
-<li><code>df</code>의 정의에 <code>stringsAsFactors = FALSE</code>를 추가하면 <code>str(df)</code> 는 어떻게 나오는가?</li>
+<li><code>df</code>의 정의에 <code>stringsAsFactors = FALSE</code>를 추가하면 <code>str(df)</code> 는 어떻게 나오는가? (가)</li>
 </ol>
 <p>
 <pre><code>가. </code></pre>
@@ -389,7 +389,7 @@ Levels: female male</code></pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](../pics/cards_csv.png)
 -->
 <ol start="26" class="example" style="list-style-type: decimal">
-<li>이를 읽어서 <code>deck</code>에 저장하는 코드로 적절한 것은? 단, <code>string</code>은 <code>character</code>로 읽어들인다.</li>
+<li>이를 읽어서 <code>deck</code>에 저장하는 코드로 적절한 것은? 단, <code>string</code>은 <code>character</code>로 읽어들인다. (다)</li>
 </ol>
 <p>
 <pre><code>가.</code></pre>
@@ -405,12 +405,12 @@ deck &lt;- read.csv(url, stringsAsaaFactors = FALSE)</code></pre>
 <pre><code>url &lt;- https://raw.githubusercontent.com/coop711/r_programming/master/data/cards.csv
 deck &lt;- read.csv(url, stringsAsaaFactors = FALSE)</code></pre>
 <ol start="27" class="example" style="list-style-type: decimal">
-<li><p>위와 같이 읽어들인 <code>deck</code>을 작업 디렉토리와 같은 위치에 있는 <code>data</code> 폴더에 <code>cards.csv</code>라는 이름으로 저장하고자 한다. 단, 첫 열에 나오는 일련번호를 없애고자 할 때 적절한 코드는?</p>
+<li><p>위와 같이 읽어들인 <code>deck</code>을 작업 디렉토리와 같은 위치에 있는 <code>data</code> 폴더에 <code>cards.csv</code>라는 이름으로 저장하고자 한다. 단, 첫 열에 나오는 일련번호를 없애고자 할 때 적절한 코드는? (나)</p>
 <p>가. <code>write.csv(deck, file = &quot;../data/cards.csv&quot;)</code></p>
 <p>나. <code>write.csv(deck, file = &quot;../data/cards.csv&quot;, row.names = FALSE)</code></p>
 <p>다. <code>save(deck, file = &quot;../data/cards.csv&quot;)</code></p>
 <p>라. <code>save(deck, file = &quot;../data/cards.csv&quot;, row.names = FALSE)</code></p></li>
-<li><p>현재 작업 디렉토리에 있는 모든 오브젝트를 <code>r_objects.RData</code> 라는 파일로 저장하고자 한다. 적절하지 않은 것은?</p>
+<li><p>현재 작업 디렉토리에 있는 모든 오브젝트를 <code>r_objects.RData</code> 라는 파일로 저장하고자 한다. 적절하지 않은 것은? (나)</p>
 <p>가. <code>save(list = ls(), file = &quot;./r_objects.RData&quot;)</code></p>
 <p>나. <code>save.image(list = ls(), file = &quot;./r_objects.RData&quot;)</code></p>
 <p>다. <code>save.image(file = &quot;./r_objects.RData&quot;)</code></p>
@@ -418,7 +418,7 @@ deck &lt;- read.csv(url, stringsAsaaFactors = FALSE)</code></pre>
 </ol>
 <P style="page-break-before:always">
 <ol start="29" class="example" style="list-style-type: decimal">
-<li><p>위에서 저장한 <code>r_objects.RData</code> 를 불러오는 코드로 적절한 것은?</p>
+<li><p>위에서 저장한 <code>r_objects.RData</code> 를 불러오는 코드로 적절한 것은? (가)</p>
 <p>가. <code>load(&quot;./r_objects.RData&quot;)</code></p>
 <p>나. <code>read(&quot;./r_objects.RData&quot;)</code></p>
 <p>다. <code>get(&quot;./r_objects.RData&quot;)</code></p>
@@ -428,12 +428,12 @@ deck &lt;- read.csv(url, stringsAsaaFactors = FALSE)</code></pre>
 <div id="v.-notation" class="section level4">
 <h4>V. Notation</h4>
 <ol start="30" class="example" style="list-style-type: decimal">
-<li><p>앞에서 정의한 <code>deck</code>에서 맨 처음 카드를 뽑아 <code>face</code>, <code>suit</code>, <code>value</code> 를 다 보고자 한다. 이 때 필요한 코드는?</p>
+<li><p>앞에서 정의한 <code>deck</code>에서 맨 처음 카드를 뽑아 <code>face</code>, <code>suit</code>, <code>value</code> 를 다 보고자 한다. 이 때 필요한 코드는? (가)</p>
 <p>가. <code>deck[1, ]</code></p>
 <p>나. <code>deck[, 1]</code></p>
 <p>다. <code>deck[1, 1]</code></p>
 <p>라. <code>deck[1, 1, drop = FALSE]</code></p></li>
-<li><p>다음 중 그 효과가 나머지 셋과 같지 않은 것은?</p>
+<li><p>다음 중 그 효과가 나머지 셋과 같지 않은 것은? (가)</p>
 <p>가.<code>sample(1:52, size = 52, replace = TRUE)</code></p>
 <p>나.<code>sample(1:52, size = 52)</code></p>
 <p>다.<code>sample(1:52)</code></p>
@@ -443,47 +443,47 @@ deck &lt;- read.csv(url, stringsAsaaFactors = FALSE)</code></pre>
 <div id="vi.-modifying-values" class="section level4">
 <h4>VI. Modifying Values</h4>
 <ol start="32" class="example" style="list-style-type: decimal">
-<li><p><code>vec &lt;- 1:6</code> 에 7번째 원소를 추가하려다가 실수로 <code>vec[8] &lt;- 7</code>이라고 입력하여 7번째 원소만 없애고자 할 때 적합한 코드는 ?</p>
+<li><p><code>vec &lt;- 1:6</code> 에 7번째 원소를 추가하려다가 실수로 <code>vec[8] &lt;- 7</code>이라고 입력하여 7번째 원소만 없애고자 할 때 적합한 코드는 ? (라)</p>
 <p>가. <code>vec[7] &lt;- &quot;&quot;</code></p>
 <p>나. <code>vec[7] &lt;- NULL</code></p>
 <p>다. <code>vec[7] &lt;- NaN</code></p>
 <p>라. <code>vec &lt;- vec[-7]</code></p></li>
-<li><p>위의 <code>deck</code>에서 매 13번째 카드의 value 를 찾아보는 코드로 적합치 않은 것은?</p>
+<li><p>위의 <code>deck</code>에서 매 13번째 카드의 value 를 찾아보는 코드로 적합치 않은 것은? (가)</p>
 <p>가. <code>deck2$value[seq(13, 52, by = 13), ]</code></p>
 <p>나. <code>deck2[seq(13, 52, by = 13), &quot;value&quot;]</code></p>
 <p>다. <code>deck2[seq(13, 52, by = 13), 3]</code></p>
 <p>라. <code>deck2[seq(13, 52, by = 13), c(FALSE, FALSE, TRUE)]</code></p></li>
-<li><p><code>c(1, 2, 3, 4) %in% c(3, 4, 5)</code>의 결과는 ?</p>
+<li><p><code>c(1, 2, 3, 4) %in% c(3, 4, 5)</code>의 결과는 ? (나)</p>
 <p>가. <code>[1] TRUE  TRUE  FALSE</code></p>
 <p>나. <code>[1] FALSE FALSE  TRUE  TRUE</code></p>
 <p>다. <code>[1] TRUE TRUE  FALSE  FALSE</code></p>
 <p>라. <code>[1] 3 4</code></p></li>
-<li><p><code>a &lt;- c(1, 2, 3)</code>, <code>b &lt;- c(1, 2, 3)</code>, <code>c &lt;- c(1, 2, 4)</code> 라 할 때 <code>a == b &amp; b == c</code> 의 결과는 무엇인가?</p>
+<li><p><code>a &lt;- c(1, 2, 3)</code>, <code>b &lt;- c(1, 2, 3)</code>, <code>c &lt;- c(1, 2, 4)</code> 라 할 때 <code>a == b &amp; b == c</code> 의 결과는 무엇인가? (나)</p>
 <p>가. <code>[1] TRUE TRUE TRUE</code></p>
 <p>나. <code>[1] TRUE TRUE FALSE</code></p>
 <p>다. <code>[1] TRUE FALSE TRUE</code></p>
 <p>라. <code>[1] FALSE TRUE TRUE</code></p></li>
-<li><p>잘 섞인 카드 <code>deck3</code>에서 <code>ace</code> 가 몇 번째 자리에 있는지 알아보는 코드로 적절한 것은 다음 중 어느 것인가?</p>
+<li><p>잘 섞인 카드 <code>deck3</code>에서 <code>ace</code> 가 몇 번째 자리에 있는지 알아보는 코드로 적절한 것은 다음 중 어느 것인가? (sk)</p>
 <p>가. <code>deck3$face == &quot;ace&quot;</code></p>
 <p>나. <code>which(deck3$face == &quot;ace&quot;)</code></p>
 <p>다. <code>deck3$face = &quot;ace&quot;</code></p>
 <p>라. <code>which(deck3$face = &quot;ace&quot;</code></p></li>
-<li><p>위의 <code>deck3</code>에서 <code>ace</code>가 들어 있는 카드를 모두 뽑아 보는 코드로 적합한 것은?</p>
+<li><p>위의 <code>deck3</code>에서 <code>ace</code>가 들어 있는 카드를 모두 뽑아 보는 코드로 적합한 것은? (가)</p>
 <p>가. <code>deck3[deck3$face == &quot;ace&quot;, ]</code></p>
 <p>나. <code>deck3[deck3$face = &quot;ace&quot;, ]</code></p>
 <p>다. <code>deck3[deck3$face == &quot;ace&quot;]</code></p>
 <p>라. <code>deck3[deck3$face = &quot;ace&quot;]</code></p></li>
-<li><p>위의 <code>deck3</code>에서 <code>face</code>가 <code>king, queen, jack</code>인 것들의 위치를 찾기 위한 코드로 적절한 것은?</p>
+<li><p>위의 <code>deck3</code>에서 <code>face</code>가 <code>king, queen, jack</code>인 것들의 위치를 찾기 위한 코드로 적절한 것은? (나)</p>
 <p>가. <code>deck3$face == c(&quot;king&quot;, &quot;queen&quot;, &quot;jack&quot;)</code></p>
 <p>나. <code>deck3$face %in% c(&quot;king&quot;, &quot;queen&quot;, &quot;jack&quot;)</code></p>
 <p>다. <code>deck3$face = c(&quot;king&quot;, &quot;queen&quot;, &quot;jack&quot;)</code></p>
 <p>라. <code>deck3$face &amp;&amp; c(&quot;king&quot;, &quot;queen&quot;, &quot;jack&quot;)</code></p></li>
-<li><p>위의 위치를 <code>facecard</code>라는 R object로 저장하였다. 이 카드들의 <code>value</code>를 모두 10으로 바꾸는 코드로 적절치 않은 것은?</p>
+<li><p>위의 위치를 <code>facecard</code>라는 R object로 저장하였다. 이 카드들의 <code>value</code>를 모두 10으로 바꾸는 코드로 적절치 않은 것은? (다)</p>
 <p>가. <code>deck3[facecard, &quot;value&quot;] &lt;- 10</code></p>
 <p>나. <code>deck3$value[facecard] &lt;- 10</code></p>
 <p>다. <code>deck3$value[facecard, ] &lt;- 10</code></p>
 <p>라. <code>deck3[facecard, 3] &lt;- 10</code></p></li>
-<li><p>다음 중 그 연산의 결과가 다른 것은?</p>
+<li><p>다음 중 그 연산의 결과가 다른 것은? (나)</p>
 <p>가. <code>any(TRUE, TRUE, NA)</code></p>
 <p>나. <code>all(TRUE, TRUE, NA)</code></p>
 <p>다. <code>any(FALSE, TRUE, NA)</code></p>
