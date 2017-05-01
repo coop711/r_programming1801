@@ -1,6 +1,7 @@
 # Environments
 ## Environments
 library(pryr)
+load("./r_modifying_values.RData")
 parenvs(all = TRUE)
 as.environment("package:stats")
 globalenv()
@@ -74,7 +75,7 @@ deal4 <- function(){
 }
 deal4()
 head(deck, 6)
-source("./R/shuffle.R")
+source("./shuffle.R")
 shuffle
 head(deck, 3)
 a <- shuffle(deck)
@@ -82,10 +83,9 @@ head(deck, 3)
 head(a, 3)
 shuffle2 <- function(){
   random <- sample(1:52)
-  assign("deck", DECK[random, ], envir = globalenv())
+  assign("deck", deck[random, ], envir = globalenv())
 }
 shuffle2()
-DECK
 deck
 ## Closures
 shuffle2()
