@@ -1,8 +1,10 @@
 # Environments
 ## Environments
+##### install.packages("pryr", repos = "https://cran.rstudio.com")
 library(pryr)
 load("./r_modifying_values.RData")
 parenvs(all = TRUE)
+## Working with Environments
 as.environment("package:stats")
 globalenv()
 baseenv()
@@ -17,7 +19,8 @@ ls()
 globalenv()$new
 ## The Active Environment
 environment()
-## Scoping Rules
+## Scoping Rules 
+##### Read pp.98
 ## Assignment
 new
 new <- "Hello Active"
@@ -35,7 +38,7 @@ show_env <- function(){
 }
 show_env()
 show_env()
-### origin environment
+##### origin environment
 environment(show_env)
 environment(parenvs)
 show_env <- function(){
@@ -50,30 +53,32 @@ show_env()
 foo <- "take me to your runtime"
 fix(show_env)
 show_env()
+##### calling environment
 rm("foo")
 fix(show_env)
 show_env()
-deal2 <- function(){
+deal <- function(){
   deck[1, ]
 }
-deal2()
-environment(deal2)
+deal()
+environment(deal)
+deal()
 DECK <- deck
 deck <- deck[-1, ]
 head(deck, n = 3)
-deal3 <- function(){
+deal <- function(){
   card <- deck[1, ]
   deck <- deck[-1, ]
   card
 }
-deal3()
+deal()
 head(deck, n = 6)
-deal4 <- function(){
+deal <- function(){
   card <- deck[1, ]
   assign("deck", deck[-1, ], envir = globalenv())
   card
 }
-deal4()
+deal()
 head(deck, 6)
 source("./shuffle.R")
 shuffle
@@ -81,15 +86,15 @@ head(deck, 3)
 a <- shuffle(deck)
 head(deck, 3)
 head(a, 3)
-shuffle2 <- function(){
+shuffle <- function(){
   random <- sample(1:52)
-  assign("deck", deck[random, ], envir = globalenv())
+  assign("deck", DECK[random, ], envir = globalenv())
 }
-shuffle2()
+shuffle()
 deck
 ## Closures
-shuffle2()
-deal4()
+shuffle()
+deal()
 setup <- function(deck) {
   DECK <- deck
   
@@ -111,9 +116,35 @@ deck
 str(cards)
 deal <- cards$deal
 shuffle <- cards$shuffle
+deal
+shuffle
+environment(deal)
+environment(shuffle)
+setup <- function(deck) {
+  DECK <- deck
+  
+  DEAL <- function() {
+    card <- deck[1, ]
+    assign("deck", deck[-1, ], envir = parent.env(environment()))
+    card
+  }
+  
+  SHUFFLE <- function() {
+    random <- sample(1:52, size = 52)
+    assign("deck", DECK[random, ], envir = parent.env(environment()))
+  }
+  
+  list(deal = DEAL, shuffle = SHUFFLE)
+}
+
+cards <- setup(deck)
+deal <- cards$deal
+shuffle <- cards$shuffle
 deal()
 shuffle()
-deck
-nrow(deck)
-DECK
-environment(DECK)
+rm(deck)
+shuffle()
+deal()
+deal()
+environment(deal)
+environment(shuffle)
