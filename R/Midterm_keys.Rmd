@@ -308,6 +308,8 @@ $R
 [1] "char"
 ````
 
+<P style = "page-break-before:always">
+
 (@) 다음 중 그 결과가 다른 것 하나를 고르시오. (다)
 
     가. `list2$logical`
@@ -566,7 +568,7 @@ deck <- read.csv(url, stringsAsaaFactors = FALSE)
 
     라. `[1] FALSE TRUE TRUE`
 
-(@) 잘 섞인 카드 `deck3`에서 `ace` 가 몇 번째 자리에 있는지 알아보는 코드로 적절한 것은 다음 중 어느 것인가? (sk)
+(@) 잘 섞인 카드 `deck3`에서 `ace` 가 몇 번째 자리에 있는지 알아보는 코드로 적절한 것은 다음 중 어느 것인가? (나)
 
     가. `deck3$face == "ace"`
 
