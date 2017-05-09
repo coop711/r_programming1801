@@ -1,3 +1,4 @@
+sink(file = "../docs/Programs_out.txt")
 # Programs
 ## Intro
 get_symbols <- function() {
@@ -98,7 +99,7 @@ same <- length(unique(symbols)) == 1
 bars <- symbols %in% c("B", "BB", "BBB")
 if(same) {
   payouts <- c("DD" = 100, "7" = 80, "BBB" = 40, "BB" = 25, "B" = 10, "C" = 10, "0" = 0)
-  prize <- unnames(payouts[symbols[1]])
+  prize <- unname(payouts[symbols[1]])
 } else if (all(bars)) {
   prize <- 5
 } else {
@@ -148,3 +149,8 @@ play()
 play()
 play()
 replicate(100, play())
+ls()
+sink()
+one_play <- play()
+one_play
+save.image(file = "./Programs.RData")
