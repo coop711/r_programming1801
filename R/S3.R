@@ -69,18 +69,22 @@ replicate(20, slot_display(play()))
 ## Generic Functions
 print(pi)
 pi
-print(head(deck))
-head(deck)
+print(head(DECK))
+head(DECK)
 print(play())
 play()
 num <- 1000000000
 class(num)
 print(num)
+class(num) <- c("POSIXct", "POSIXt")
+print(num)
+num
 print(unclass(num))
 ## Methods
 print
 num.f <- factor(c(1:3, 3:1), levels = 1:3, labels = c("A", "B", "C"))
 num.f
+class(num.f)
 str(num.f)
 methods(print)
 ## Method Dispatch

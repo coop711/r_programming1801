@@ -51,6 +51,7 @@ if (x == 1) {
 }
 x
 ### else Statements
+pi
 a <- pi
 dec <- a - trunc(pi)
 dec
@@ -61,7 +62,7 @@ if(dec >= 0.5) {
 }
 a
 a <- 2
-b <- 3
+b <- 2
 if (a > b) {
   print("A wins!")
 } else if (a < b) {
@@ -72,6 +73,8 @@ if (a > b) {
 ### Test whether the symbols are three of a kind
 symbols <- c("7", "7", "7")
 symbols[1] == symbols[2] & symbols[2] == symbols[3]
+symbols == symbols[1]
+all(symbols == symbols[1])
 unique(symbols)
 length(unique(symbols))
 length(unique(symbols)) == 1
@@ -123,6 +126,7 @@ diamonds <- sum(symbols == "DD")
 cherries
 cherries + 1
 prize <- prize * 2 ^ diamonds
+prize
 ## Code Comments
 score <- function(symbols) {
   same <- length(unique(symbols)) == 1
@@ -151,6 +155,7 @@ play()
 replicate(100, play())
 ls()
 sink()
+play()
 one_play <- play()
 one_play
 save.image(file = "./Programs.RData")
