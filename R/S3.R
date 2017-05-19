@@ -120,3 +120,4 @@ play2 <- play()
 play2
 c(play1, play2)
 play1[1]
+save.image("./S3.RData")
