@@ -57,7 +57,7 @@ for (i in c("My", "First", "for", "loop")) {
 for (value in c("My", "First", "for", "loop")) {
   value
 }
-chars <- as.character()
+chars <- vector(length = 4)
 chars
 words <- c("My", "First", "for", "loop")
 for (i in 1:4) {
