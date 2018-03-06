@@ -1,4 +1,5 @@
-# Objects
+#> Objects
+# die <- c(1, 2, 3, 4, 5, 6)
 die <- 1:6
 die
 ls()
@@ -23,8 +24,9 @@ factorial(3)
 mean(1:6)
 mean(die)
 sd(die)
-round(mean(die))
+round(mean(die), digits = 2)
 ?sample
+sample(die)
 sample(x = 1:4, size = 2)
 sample(x = die, size = 1)
 sample(x = die, size = 1)
