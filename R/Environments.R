@@ -61,7 +61,7 @@ show_env <- function(x = foo) {
 show_env()
 ##### calling environment
 rm("foo")
-fix(show_env)
+# fix(show_env)
 show_env <- function() {
   list(ran.in = environment(),
        parent = parent.env(environment()),
