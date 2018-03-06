@@ -14,6 +14,7 @@ die %o% die
 outer(die, die)
 help("%*%")
 help("%o%")
+?`%*%`
 ?outer
 # Functions
 round(3.1415)

@@ -17,11 +17,14 @@ long <- rep(c(-1, 1), 5000000)
 system.time(abs_loop(long))
 system.time(abs_set(long))
 system.time(abs(long))
+## How to Write Vectorized Code
 vec <- 1:10 * rep(c(1, -1), 5)
 vec
 vec < 0
 vec[vec < 0]
 vec[vec < 0] * -1
+vec[vec < 0] <- vec[vec < 0] * -1
+vec
 vec <- c("DD", "C", "7", "B", "BB", "BBB", "0")
 many <- rep(vec, 1000000)
 vec[vec == "DD"]
@@ -50,6 +53,7 @@ change_vec <- function(vec) {
   
   vec
 }
+
 system.time(change_vec(many))
 change_vec2 <- function(vec) {
   tb <- c("DD" = "joker", "C" = "ace", "7" = "king", "B" = "queen", "BB" = "jack", 
@@ -58,7 +62,7 @@ change_vec2 <- function(vec) {
 }
 change_vec2(vec)
 system.time(change_vec2(many))
-## Fast for loops
+## How to Write Fast for Loops in R
 system.time(
   {
   output <- rep(NA, 1000000)
@@ -80,11 +84,19 @@ system.time(
 ## Vectorized Code in Practice
 load("./Loops.RData")
 play
-winnings <- vector(length = 1000000)
-for (i in 1:1000000) {
-  winnings[i] <- play()
-}
+score
+### Law of Large Numbers
+system.time(
+  {
+    winnings <- vector(length = 1000000)
+    for (i in 1:1000000) {
+      winnings[i] <- play()
+    }
+  }
+)
 mean(winnings)
+sum(combos$prize * combos$prob)
+### 0.934356
 system.time({
 for (i in 1:1000000) {
   winnings[i] <- play()
@@ -157,8 +169,8 @@ score_many <- function(symbols) {
   prize[two] <- payoffs[symbols[two, 2]]
   prize[three] <- payoffs[symbols[three, 3]]
   
-  # Step 5: Double prize for every diamon in combo ----
-  unname(prize * 2^diamonds)
+  # Step 5: Double prize for every diamond in combo ----
+  unname(prize * 2 ^ diamonds)
   
 }
 
@@ -167,4 +179,5 @@ play_many <- function(n) {
   data.frame(w1 = symb_mat[, 1], w2 = symb_mat[, 2], w3 = symb_mat[, 3], 
              prize = score_many(symb_mat))
 }
+play_many(10)
 system.time(play_many(1000000))
